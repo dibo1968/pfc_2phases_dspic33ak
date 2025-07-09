@@ -1,14 +1,26 @@
 /**
- * MAIN Generated Driver Header File
- * 
- * @file      system.c
- *            
- * @ingroup   systemdriver
- *            
- * @brief     This is the generated driver header file for the System driver
- *            
- * @skipline  Device : dsPIC33AK128MC106
+  PWM Generated Driver Header File
+ 
+  @Company
+    Microchip Technology Inc.
+ 
+  @File Name
+    pwm.h
+ 
+  @Summary
+    This is the generated driver header file for the PWM driver using CCL
+ 
+  @Description
+    This file provides APIs declarations for PWM driver.
+    Generation Information :
+        Product Revision  :  CCL -
+        Driver Revision   :  0.1.0
+        Device            :  dsPIC33AK128MC106
 */
+
+#ifndef PWM_H
+#define PWM_H
+
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
 
@@ -30,31 +42,27 @@
     THIS SOFTWARE.
 */
 
-#include "../system.h"
-#include "../clock.h"
-#include "../pins.h"
-#include "../../adc/adc1.h"
-#include "../../dma/dma.h"
-#include "../dmt.h"
-#include "../../ptg/ptg.h"
-#include "../../peripheral/pwm.h"
-#include "../../pwm/sccp1.h"
-#include "../interrupt.h"
+/**
+  @Description
+    Initializes PWM module, using the given initialization data. 
+ 
+  @Preconditions
+    None.
 
+  @Param
+    None.
 
-void SYSTEM_Initialize(void)
-{
-    CLOCK_Initialize();
-    PINS_Initialize();
-    ADC1_Initialize();
-    DMA_Initialize();
-    DMT_Initialize();
-    PTG_Initialize();
-    PWM_Initialize();
-    SCCP1_PWM_Initialize();
-    INTERRUPT_GlobalEnable();
-    INTERRUPT_Initialize();
-}
+  @Returns
+    None.
+
+  @Example
+    <code>
+      PWM_Initialize();
+    </code>
+*/
+void PWM_Initialize (void);
+
+#endif //PWM_H
 
 /**
  End of File

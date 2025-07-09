@@ -1,14 +1,17 @@
 /**
- * MAIN Generated Driver Header File
+ * PWM Generated Driver Types Header File
  * 
- * @file      system.c
- *            
- * @ingroup   systemdriver
- *            
- * @brief     This is the generated driver header file for the System driver
- *            
+ * @file 	  pwm_types.h
+ * 
+ * @ingroup   pwmdriver
+ * 
+ * @brief 	  This is the generated driver types header file for the PWM driver
+ *
+ * @skipline @version   PLIB Version 1.1.0
+ *
  * @skipline  Device : dsPIC33AK128MC106
 */
+
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
 
@@ -30,32 +33,25 @@
     THIS SOFTWARE.
 */
 
-#include "../system.h"
-#include "../clock.h"
-#include "../pins.h"
-#include "../../adc/adc1.h"
-#include "../../dma/dma.h"
-#include "../dmt.h"
-#include "../../ptg/ptg.h"
-#include "../../peripheral/pwm.h"
-#include "../../pwm/sccp1.h"
-#include "../interrupt.h"
+#ifndef PWM_TYPES_H
+#define PWM_TYPES_H
 
+// Section: Included Files
 
-void SYSTEM_Initialize(void)
+// Section: Enum Declarations
+
+/**
+ @ingroup  pwmdriver
+ @enum 	   PWM_OUTPUT_MODES
+ @brief	   Enumeration containing the output modes of PWM driver
+*/
+enum PWM_OUTPUT_MODES
 {
-    CLOCK_Initialize();
-    PINS_Initialize();
-    ADC1_Initialize();
-    DMA_Initialize();
-    DMT_Initialize();
-    PTG_Initialize();
-    PWM_Initialize();
-    SCCP1_PWM_Initialize();
-    INTERRUPT_GlobalEnable();
-    INTERRUPT_Initialize();
-}
+    OUTPUT_MODES_NOT_AVAILABLE,         /**< No output modes available*/
 
+};
+
+#endif  //PWM_TYPES_H
 /**
  End of File
 */

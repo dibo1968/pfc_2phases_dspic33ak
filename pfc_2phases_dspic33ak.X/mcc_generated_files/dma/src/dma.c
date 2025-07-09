@@ -76,8 +76,8 @@ void DMA_Initialize(void)
     DMALOW= 0x4000UL;
     // HADDR 32768; 
     DMAHIGH= 0x8000UL;
-    // CHEN disabled; HALFEN disabled; MATCHEN disabled; DONEEN disabled; CHREQ disabled; SIZE Byte; FLWCON Read from SADDR[23:0] followed by write to DADDR[23:0]; TRMODE One-Shot; DAMODE Unchanged; SAMODE Unchanged; RETEN disabled; RELOADS disabled; RELOADD disabled; RELOADC disabled; PCHEN disabled; PPEN disabled; 
-    DMA0CH= 0x0UL;
+    // CHEN disabled; HALFEN disabled; MATCHEN disabled; DONEEN enabled; CHREQ disabled; SIZE Byte; FLWCON Read from SADDR[23:0] followed by write to DADDR[23:0]; TRMODE One-Shot; DAMODE Unchanged; SAMODE Unchanged; RETEN disabled; RELOADS disabled; RELOADD disabled; RELOADC disabled; PCHEN disabled; PPEN disabled; 
+    DMA0CH= 0x8UL;
     // CHEN disabled; HALFEN disabled; MATCHEN disabled; DONEEN disabled; CHREQ disabled; SIZE Byte; FLWCON Read from SADDR[23:0] followed by write to DADDR[23:0]; TRMODE One-Shot; DAMODE Unchanged; SAMODE Unchanged; RETEN disabled; RELOADS disabled; RELOADD disabled; RELOADC disabled; PCHEN disabled; PPEN disabled; 
     DMA1CH= 0x0UL;
     // CHEN disabled; HALFEN disabled; MATCHEN disabled; DONEEN disabled; CHREQ disabled; SIZE Byte; FLWCON Read from SADDR[23:0] followed by write to DADDR[23:0]; TRMODE One-Shot; DAMODE Unchanged; SAMODE Unchanged; RETEN disabled; RELOADS disabled; RELOADD disabled; RELOADC disabled; PCHEN disabled; PPEN disabled; 
@@ -234,6 +234,8 @@ void DMA_Initialize(void)
     DMA_ChannelCallbackRegister(DMA_CHANNEL_4, &DMA_Channel4Callback);
     DMA_ChannelCallbackRegister(DMA_CHANNEL_5, &DMA_Channel5Callback);
     
+    //Enable DMA Channel 0
+    DMA0CHbits.CHEN = 1;
 }
 
 void DMA_Deinitialize(void) 

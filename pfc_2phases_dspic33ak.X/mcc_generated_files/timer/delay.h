@@ -1,13 +1,13 @@
 /**
- * MAIN Generated Driver Header File
+ * DELAY Generated Driver API Header File
  * 
- * @file      system.c
- *            
- * @ingroup   systemdriver
- *            
- * @brief     This is the generated driver header file for the System driver
- *            
- * @skipline  Device : dsPIC33AK128MC106
+ * @file delay.h
+ * 
+ * @defgroup delay DELAY BLOCKING DRIVER
+ * 
+ * @brief This file contains the API to generate delays in the range of milliseconds and microseconds.
+ *
+ * @version DELAY Driver Version 1.1.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -30,32 +30,25 @@
     THIS SOFTWARE.
 */
 
-#include "../system.h"
-#include "../clock.h"
-#include "../pins.h"
-#include "../../adc/adc1.h"
-#include "../../dma/dma.h"
-#include "../dmt.h"
-#include "../../ptg/ptg.h"
-#include "../../peripheral/pwm.h"
-#include "../../pwm/sccp1.h"
-#include "../interrupt.h"
+#ifndef _DELAY_H
+#define _DELAY_H
 
-
-void SYSTEM_Initialize(void)
-{
-    CLOCK_Initialize();
-    PINS_Initialize();
-    ADC1_Initialize();
-    DMA_Initialize();
-    DMT_Initialize();
-    PTG_Initialize();
-    PWM_Initialize();
-    SCCP1_PWM_Initialize();
-    INTERRUPT_GlobalEnable();
-    INTERRUPT_Initialize();
-}
+#include <stdint.h>
 
 /**
- End of File
+*  @ingroup delay
+*  @brief Delays the execution of the program for a certain number of milliseconds
+*  @param[in] milliseconds - Number of milliseconds to delay
+*  @return None.
 */
+void DELAY_milliseconds(uint16_t milliseconds);
+
+/**
+*  @ingroup delay
+*  @brief Delays the execution of the program for a certain number of microseconds
+*  @param[in] microseconds - Number of microseconds to delay
+*  @return None.
+*/
+void DELAY_microseconds(uint16_t microseconds);
+
+#endif	// _DELAY_H

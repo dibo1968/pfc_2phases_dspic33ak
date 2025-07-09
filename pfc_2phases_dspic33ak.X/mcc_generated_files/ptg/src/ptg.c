@@ -73,8 +73,8 @@ const struct PTG_INTERFACE PTG = {
 
 void PTG_Initialize (void)
 {
-    // Clock Frequency = 8,000,000; PTGITM Single level detect with Step delay not executed on exit of command; PTGSTRT disabled; PTGIVIS disabled; PTGSSEN disabled; PTGSWT disabled; PTGTOGL disabled; SIDL disabled; ON disabled; PTGWDT 0; PTGPWD 1; PTGDIV 1; 
-	PTGCON = (0x3UL & 0xFFFF77FFUL);  // disabling PTGEN bit and PTGSTRT bit
+    // Clock Frequency = 8,000,000; PTGITM Single level detect with Step delay not executed on exit of command; PTGSTRT disabled; PTGIVIS disabled; PTGSSEN disabled; PTGSWT disabled; PTGTOGL disabled; SIDL disabled; ON disabled; PTGWDT 16; PTGPWD 1; PTGDIV 1; 
+	PTGCON = (0x20003UL & 0xFFFF77FFUL);  // disabling PTGEN bit and PTGSTRT bit
     // PTGBTE disabled; 
     PTGBTE = 0x0UL;
     // PTGHOLD 1; 

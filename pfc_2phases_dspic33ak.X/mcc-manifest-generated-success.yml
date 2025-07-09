@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: pfc_2phases_dspic33ak
-creation_date: 2025-07-09T11:18:15.940+03:00[Europe/Athens]
+creation_date: 2025-07-09T11:27:40.907+03:00[Europe/Athens]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -18,13 +18,17 @@ device_library: {library_class: com.microchip.mcc.melody.Library, name: Melody, 
 packs: {name: dsPIC33AK-MC_DFP, version: 1.2.125}
 modules:
 - {name: '@mchp-mcc/adc-driver', type: MELODY, version: 1.1.0}
+- {name: '@mchp-mcc/default-peripheral-initializer-16bit', type: MELODY, version: 1.0.0}
+- {name: '@mchp-mcc/delay-blocking-driver', type: MELODY, version: 3.2.0}
 - {name: '@mchp-mcc/dma-16bit-driver', type: MELODY, version: 1.0.8}
 - {name: '@mchp-mcc/dmt-16bit-driver', type: MELODY, version: 1.0.7}
+- {name: '@mchp-mcc/dspic33a-adc', type: MELODY, version: 1.1.0}
 - {name: '@mchp-mcc/dspic33a-clock', type: MELODY, version: 1.1.2}
 - {name: '@mchp-mcc/dspic33a-configuration-bits', type: MELODY, version: 1.1.0}
 - {name: '@mchp-mcc/dspic33a-dma', type: MELODY, version: 1.1.0}
 - {name: '@mchp-mcc/dspic33a-dmt', type: MELODY, version: 1.0.1}
 - {name: '@mchp-mcc/dspic33a-interrupt', type: MELODY, version: 1.1.0}
+- {name: '@mchp-mcc/dspic33a-mccp', type: MELODY, version: 1.1.0}
 - {name: '@mchp-mcc/dspic33a-pac', type: MELODY, version: 1.0.1}
 - {name: '@mchp-mcc/dspic33a-pin-manager', type: MELODY, version: 1.0.1}
 - {name: '@mchp-mcc/dspic33a-ptg', type: MELODY, version: 1.0.2}

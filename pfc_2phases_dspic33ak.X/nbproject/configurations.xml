@@ -7,15 +7,29 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="adc" displayName="adc" projectFiles="true">
+          <itemPath>mcc_generated_files/adc/adc_interface.h</itemPath>
+          <itemPath>mcc_generated_files/adc/adc_types.h</itemPath>
+          <itemPath>mcc_generated_files/adc/adc1.h</itemPath>
+          <itemPath>mcc_generated_files/adc/adc_features.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="dma" displayName="dma" projectFiles="true">
           <itemPath>mcc_generated_files/dma/dma.h</itemPath>
           <itemPath>mcc_generated_files/dma/dma_types.h</itemPath>
           <itemPath>mcc_generated_files/dma/dma_interface.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+          <itemPath>mcc_generated_files/peripheral/pwm.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="ptg" displayName="ptg" projectFiles="true">
           <itemPath>mcc_generated_files/ptg/ptg_interface.h</itemPath>
           <itemPath>mcc_generated_files/ptg/ptg.h</itemPath>
           <itemPath>mcc_generated_files/ptg/ptg_types.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
+          <itemPath>mcc_generated_files/pwm/sccp1.h</itemPath>
+          <itemPath>mcc_generated_files/pwm/pwm_interface.h</itemPath>
+          <itemPath>mcc_generated_files/pwm/pwm_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <itemPath>mcc_generated_files/system/reset.h</itemPath>
@@ -29,6 +43,9 @@
           <itemPath>mcc_generated_files/system/pins.h</itemPath>
           <itemPath>mcc_generated_files/system/clock_types.h</itemPath>
           <itemPath>mcc_generated_files/system/interrupt_types.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="timer" displayName="timer" projectFiles="true">
+          <itemPath>mcc_generated_files/timer/delay.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -48,14 +65,29 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="adc" displayName="adc" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/adc/src/adc1.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="dma" displayName="dma" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/dma/src/dma.c</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/peripheral/src/pwm.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="ptg" displayName="ptg" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/ptg/src/ptg.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/pwm/src/sccp1.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
@@ -70,6 +102,11 @@
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
             <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="timer" displayName="timer" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/timer/src/delay.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
