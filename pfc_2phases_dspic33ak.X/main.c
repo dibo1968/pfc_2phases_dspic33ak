@@ -24,7 +24,7 @@
 #include <stdlib.h>
 
 /*
-    Main application
+    Main application-PFC
  */
 int main(void)
 {
