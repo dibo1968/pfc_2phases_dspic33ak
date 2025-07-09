@@ -111,8 +111,35 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>board_service.c</itemPath>
+      <itemPath>board_service.h</itemPath>
+      <itemPath>measure.c</itemPath>
+      <itemPath>measure.h</itemPath>
+      <itemPath>pfc.c</itemPath>
+      <itemPath>pfc_calc_params.h</itemPath>
+      <itemPath>pfc_general.h</itemPath>
+      <itemPath>pfc_measure.c</itemPath>
+      <itemPath>pfc_measure.h</itemPath>
+      <itemPath>pfc_pi.c</itemPath>
+      <itemPath>pfc_pi.h</itemPath>
+      <itemPath>pfc_userparams.h</itemPath>
+      <itemPath>adc.c</itemPath>
+      <itemPath>adc.h</itemPath>
+      <itemPath>pwm.c</itemPath>
+      <itemPath>pwm.h</itemPath>
+      <itemPath>port_config.c</itemPath>
+      <itemPath>port_config.h</itemPath>
+      <itemPath>pfc.h</itemPath>
+      <itemPath>clock.c</itemPath>
+      <itemPath>clock.h</itemPath>
+      <itemPath>timer1.c</itemPath>
+      <itemPath>timer1.h</itemPath>
+      <itemPath>delay.h</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

@@ -20,8 +20,8 @@
  */
 #include "mcc_generated_files/system/system.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "board_service.h"
+#include "pfc.h"
 
 /*
     Main application-PFC 
@@ -29,8 +29,23 @@
 int main(void)
 {
     SYSTEM_Initialize();
-
+    PFC_ServiceInit();
+    BoardService();
     while(1)
     {
     }
+}
+
+/**
+* <B> Function: _T1Interrupt  </B>
+*
+* @brief T1 Interrupt Vector
+ * Executes BoardServiceStepIsr()
+*
+*/
+void __attribute__((__interrupt__,__auto_psv__)) _T1Interrupt (void)
+{
+
+    BoardServiceStepIsr();
+    TIMER1_InterruptFlagClear();
 }
