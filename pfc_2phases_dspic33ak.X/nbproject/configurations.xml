@@ -135,6 +135,7 @@
       <itemPath>timer1.c</itemPath>
       <itemPath>timer1.h</itemPath>
       <itemPath>delay.h</itemPath>
+      <itemPath>traps.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
