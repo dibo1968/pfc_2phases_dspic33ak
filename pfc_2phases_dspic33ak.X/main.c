@@ -26,7 +26,6 @@
 /*
     Main application
  */
-
 int main(void)
 {
     SYSTEM_Initialize();
