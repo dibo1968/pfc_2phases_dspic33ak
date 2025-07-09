@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/pfc_2phases_dspic33ak.X.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>16384</length>
+      <used>94</used>
+      <free>16290</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>131068</length>
+      <used>11732</used>
+      <free>119336</free>
+    </memory>
+  </executable>
+</project>
