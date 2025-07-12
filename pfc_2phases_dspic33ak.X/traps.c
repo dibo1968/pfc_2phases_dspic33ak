@@ -51,9 +51,38 @@
 
 #include "xc.h"
 #include "board_service.h"
-
+typedef enum {
+    TRAP_OSC_FAIL,
+    TRAP_ADDR_ERR,
+    TRAP_STACK_ERR,
+    TRAP_MATH_ERR,
+    TRAP_UNKNOWN
+} TRAP_ID_T;
 // </editor-fold>
+static void HAL_TrapHandler(TRAP_ID_T trap_id)
+{
+    switch(trap_id)
+    {
+        case TRAP_OSC_FAIL:
+            // Oscillator failure handling
+            break;
+        case TRAP_ADDR_ERR:
+            // Invalid memory access
+            break;
+        case TRAP_STACK_ERR:
+            // Stack overflow/underflow
+            break;
+        case TRAP_MATH_ERR:
+            // Divide by zero or overflow
+            break;
+        default:
+            // Unknown trap
+            break;
+    }
 
+    /* sw reset*/
+    __asm__ volatile ("reset");
+}
 // <editor-fold defaultstate="collapsed" desc="INTERFACE FUNCTIONS ">
 /*
 Primary Exception Vector handlers:
@@ -65,41 +94,41 @@ of their application.
 */
 void __attribute__((__interrupt__,no_auto_psv)) _OscillatorFail(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(TRAP_OSC_FAIL);
     while (1);
 }
 
 void __attribute__((__interrupt__,no_auto_psv)) _AddressError(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(TRAP_ADDR_ERR);
     while (1);
 }
 void __attribute__((__interrupt__,no_auto_psv)) _StackError(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(TRAP_STACK_ERR);
     while (1);
 }
 
 void __attribute__((__interrupt__,no_auto_psv)) _MathError(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(TRAP_MATH_ERR);
     while (1);
 }
 void __attribute__((__interrupt__,no_auto_psv)) _HardTrapError(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(0);
     while (1);
 }
 
 void __attribute__((__interrupt__,no_auto_psv)) _SoftTrapError(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(0);
     while (1);
 }
 
 void __attribute__((__interrupt__,no_auto_psv)) _DefaultInterrupt(void)
 {
-    HAL_TrapHandler();
+    HAL_TrapHandler(0);
     while (1);
 }
 // </editor-fold>
