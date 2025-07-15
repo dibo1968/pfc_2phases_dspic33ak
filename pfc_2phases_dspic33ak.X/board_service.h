@@ -58,7 +58,7 @@
 
 #include "port_config.h"
 /*#include "uart1.h"*/
-#include "pwm.h"
+#include "pwm_manual.h"
 #include "clock.h"
 #include "adc.h"
 #include "measure.h"

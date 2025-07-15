@@ -128,8 +128,6 @@
       <itemPath>pfc_userparams.h</itemPath>
       <itemPath>adc.c</itemPath>
       <itemPath>adc.h</itemPath>
-      <itemPath>pwm.c</itemPath>
-      <itemPath>pwm.h</itemPath>
       <itemPath>port_config.c</itemPath>
       <itemPath>port_config.h</itemPath>
       <itemPath>pfc.h</itemPath>
@@ -139,6 +137,8 @@
       <itemPath>timer1.h</itemPath>
       <itemPath>delay.h</itemPath>
       <itemPath>traps.c</itemPath>
+      <itemPath>pwm_manual.c</itemPath>
+      <itemPath>pwm_manual.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/adc/src/adc1.c mcc_generated_files/adc/src/adc2.c mcc_generated_files/peripheral/src/flash.c mcc_generated_files/system/src/traps.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/dmt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/where_was_i.s mcc_generated_files/system/src/reset.c mcc_generated_files/system/src/dmt_asm.s mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/timer/src/delay.c main.c board_service.c measure.c pfc.c pfc_measure.c pfc_pi.c adc.c pwm.c port_config.c clock.c timer1.c traps.c mcc_generated_files/pwm_hs/src/pwm.c mcc_generated_files/pwm/src/sccp1.c mcc_generated_files/dma/src/dma.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/adc/src/adc1.c mcc_generated_files/adc/src/adc2.c mcc_generated_files/dma/src/dma.c mcc_generated_files/peripheral/src/flash.c mcc_generated_files/pwm/src/sccp1.c mcc_generated_files/pwm_hs/src/pwm.c mcc_generated_files/system/src/traps.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/dmt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/where_was_i.s mcc_generated_files/system/src/reset.c mcc_generated_files/system/src/dmt_asm.s mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/timer/src/delay.c main.c board_service.c measure.c pfc.c pfc_measure.c pfc_pi.c adc.c port_config.c clock.c timer1.c traps.c pwm_manual.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o ${OBJECTDIR}/mcc_generated_files/system/src/traps.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/where_was_i.o ${OBJECTDIR}/mcc_generated_files/system/src/reset.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt_asm.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/main.o ${OBJECTDIR}/board_service.o ${OBJECTDIR}/measure.o ${OBJECTDIR}/pfc.o ${OBJECTDIR}/pfc_measure.o ${OBJECTDIR}/pfc_pi.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/port_config.o ${OBJECTDIR}/clock.o ${OBJECTDIR}/timer1.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o.d ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o.d ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o.d ${OBJECTDIR}/mcc_generated_files/system/src/traps.o.d ${OBJECTDIR}/mcc_generated_files/system/src/system.o.d ${OBJECTDIR}/mcc_generated_files/system/src/dmt.o.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.o.d ${OBJECTDIR}/mcc_generated_files/system/src/where_was_i.o.d ${OBJECTDIR}/mcc_generated_files/system/src/reset.o.d ${OBJECTDIR}/mcc_generated_files/system/src/dmt_asm.o.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.o.d ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/board_service.o.d ${OBJECTDIR}/measure.o.d ${OBJECTDIR}/pfc.o.d ${OBJECTDIR}/pfc_measure.o.d ${OBJECTDIR}/pfc_pi.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/pwm.o.d ${OBJECTDIR}/port_config.o.d ${OBJECTDIR}/clock.o.d ${OBJECTDIR}/timer1.o.d ${OBJECTDIR}/traps.o.d ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o ${OBJECTDIR}/mcc_generated_files/system/src/traps.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/where_was_i.o ${OBJECTDIR}/mcc_generated_files/system/src/reset.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt_asm.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/main.o ${OBJECTDIR}/board_service.o ${OBJECTDIR}/measure.o ${OBJECTDIR}/pfc.o ${OBJECTDIR}/pfc_measure.o ${OBJECTDIR}/pfc_pi.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/port_config.o ${OBJECTDIR}/clock.o ${OBJECTDIR}/timer1.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/pwm_manual.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o.d ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o.d ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o.d ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d ${OBJECTDIR}/mcc_generated_files/system/src/traps.o.d ${OBJECTDIR}/mcc_generated_files/system/src/system.o.d ${OBJECTDIR}/mcc_generated_files/system/src/dmt.o.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.o.d ${OBJECTDIR}/mcc_generated_files/system/src/where_was_i.o.d ${OBJECTDIR}/mcc_generated_files/system/src/reset.o.d ${OBJECTDIR}/mcc_generated_files/system/src/dmt_asm.o.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.o.d ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/board_service.o.d ${OBJECTDIR}/measure.o.d ${OBJECTDIR}/pfc.o.d ${OBJECTDIR}/pfc_measure.o.d ${OBJECTDIR}/pfc_pi.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/port_config.o.d ${OBJECTDIR}/clock.o.d ${OBJECTDIR}/timer1.o.d ${OBJECTDIR}/traps.o.d ${OBJECTDIR}/pwm_manual.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o ${OBJECTDIR}/mcc_generated_files/system/src/traps.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/where_was_i.o ${OBJECTDIR}/mcc_generated_files/system/src/reset.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt_asm.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/main.o ${OBJECTDIR}/board_service.o ${OBJECTDIR}/measure.o ${OBJECTDIR}/pfc.o ${OBJECTDIR}/pfc_measure.o ${OBJECTDIR}/pfc_pi.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/port_config.o ${OBJECTDIR}/clock.o ${OBJECTDIR}/timer1.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o ${OBJECTDIR}/mcc_generated_files/system/src/traps.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/where_was_i.o ${OBJECTDIR}/mcc_generated_files/system/src/reset.o ${OBJECTDIR}/mcc_generated_files/system/src/dmt_asm.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/main.o ${OBJECTDIR}/board_service.o ${OBJECTDIR}/measure.o ${OBJECTDIR}/pfc.o ${OBJECTDIR}/pfc_measure.o ${OBJECTDIR}/pfc_pi.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/port_config.o ${OBJECTDIR}/clock.o ${OBJECTDIR}/timer1.o ${OBJECTDIR}/traps.o ${OBJECTDIR}/pwm_manual.o
 
 # Source Files
-SOURCEFILES=mcc_generated_files/adc/src/adc1.c mcc_generated_files/adc/src/adc2.c mcc_generated_files/peripheral/src/flash.c mcc_generated_files/system/src/traps.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/dmt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/where_was_i.s mcc_generated_files/system/src/reset.c mcc_generated_files/system/src/dmt_asm.s mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/timer/src/delay.c main.c board_service.c measure.c pfc.c pfc_measure.c pfc_pi.c adc.c pwm.c port_config.c clock.c timer1.c traps.c mcc_generated_files/pwm_hs/src/pwm.c mcc_generated_files/pwm/src/sccp1.c mcc_generated_files/dma/src/dma.c
+SOURCEFILES=mcc_generated_files/adc/src/adc1.c mcc_generated_files/adc/src/adc2.c mcc_generated_files/dma/src/dma.c mcc_generated_files/peripheral/src/flash.c mcc_generated_files/pwm/src/sccp1.c mcc_generated_files/pwm_hs/src/pwm.c mcc_generated_files/system/src/traps.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/dmt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/where_was_i.s mcc_generated_files/system/src/reset.c mcc_generated_files/system/src/dmt_asm.s mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/pins.c mcc_generated_files/timer/src/delay.c main.c board_service.c measure.c pfc.c pfc_measure.c pfc_pi.c adc.c port_config.c clock.c timer1.c traps.c pwm_manual.c
 
 
 
@@ -101,11 +101,29 @@ ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o: mcc_generated_files/adc/src/adc
 	@${RM} ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/adc/src/adc2.c  -o ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/mcc_generated_files/dma/src/dma.o: mcc_generated_files/dma/src/dma.c  .generated_files/flags/default/ef91bb052544886d05f0f4e83a5dbc7badd7885e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/dma/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/dma/src/dma.c  -o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o: mcc_generated_files/peripheral/src/flash.c  .generated_files/flags/default/f47a44b1987529124c01092f6385c6aa810b9ce6 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/peripheral/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o.d 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/peripheral/src/flash.c  -o ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o: mcc_generated_files/pwm/src/sccp1.c  .generated_files/flags/default/ec75695be7946ccaaac3ae90ff5f3e98196e18b3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm/src/sccp1.c  -o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o: mcc_generated_files/pwm_hs/src/pwm.c  .generated_files/flags/default/bc7de5020dff7fb7286e9977e13e7a0edb9c58a1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm_hs/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm_hs/src/pwm.c  -o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 ${OBJECTDIR}/mcc_generated_files/system/src/traps.o: mcc_generated_files/system/src/traps.c  .generated_files/flags/default/6a8833041c06e9f39afa8eea114a1dc0a7e27719 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/system/src" 
@@ -203,12 +221,6 @@ ${OBJECTDIR}/adc.o: adc.c  .generated_files/flags/default/e5f3173da6c7751d5f95b4
 	@${RM} ${OBJECTDIR}/adc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  adc.c  -o ${OBJECTDIR}/adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/pwm.o: pwm.c  .generated_files/flags/default/95eeb5ed0363ffb01e6401aad43a752e01dfe8ff .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/pwm.o.d 
-	@${RM} ${OBJECTDIR}/pwm.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  pwm.c  -o ${OBJECTDIR}/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pwm.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/port_config.o: port_config.c  .generated_files/flags/default/ea1c1741d1dbc2e9c123cc98d34803957b687333 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/port_config.o.d 
@@ -233,23 +245,11 @@ ${OBJECTDIR}/traps.o: traps.c  .generated_files/flags/default/5df98fae49f90c69ae
 	@${RM} ${OBJECTDIR}/traps.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  traps.c  -o ${OBJECTDIR}/traps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/traps.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o: mcc_generated_files/pwm_hs/src/pwm.c  .generated_files/flags/default/bc7de5020dff7fb7286e9977e13e7a0edb9c58a1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm_hs/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm_hs/src/pwm.c  -o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o: mcc_generated_files/pwm/src/sccp1.c  .generated_files/flags/default/ec75695be7946ccaaac3ae90ff5f3e98196e18b3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm/src/sccp1.c  -o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/mcc_generated_files/dma/src/dma.o: mcc_generated_files/dma/src/dma.c  .generated_files/flags/default/ef91bb052544886d05f0f4e83a5dbc7badd7885e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/dma/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/dma/src/dma.c  -o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/pwm_manual.o: pwm_manual.c  .generated_files/flags/default/2506ac12ce4ebd8f817ba84afe0d14573c1c6ac9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pwm_manual.o.d 
+	@${RM} ${OBJECTDIR}/pwm_manual.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  pwm_manual.c  -o ${OBJECTDIR}/pwm_manual.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pwm_manual.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
 ${OBJECTDIR}/mcc_generated_files/adc/src/adc1.o: mcc_generated_files/adc/src/adc1.c  .generated_files/flags/default/e2b7694072745240c8b63e29fcccb8567359a630 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -264,11 +264,29 @@ ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o: mcc_generated_files/adc/src/adc
 	@${RM} ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/adc/src/adc2.c  -o ${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/adc/src/adc2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/mcc_generated_files/dma/src/dma.o: mcc_generated_files/dma/src/dma.c  .generated_files/flags/default/dadd4650a3ae230196213428802fbfed6958423f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/dma/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/dma/src/dma.c  -o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o: mcc_generated_files/peripheral/src/flash.c  .generated_files/flags/default/ce97a87d0b48b3337da3a0645ac3f4573a819b86 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/peripheral/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o.d 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/peripheral/src/flash.c  -o ${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/peripheral/src/flash.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o: mcc_generated_files/pwm/src/sccp1.c  .generated_files/flags/default/e2a416ed32d05df3857dcd5fcbbdd83786a98145 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm/src/sccp1.c  -o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o: mcc_generated_files/pwm_hs/src/pwm.c  .generated_files/flags/default/916070742f805524698d800e358cbb99b8abd272 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm_hs/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm_hs/src/pwm.c  -o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 ${OBJECTDIR}/mcc_generated_files/system/src/traps.o: mcc_generated_files/system/src/traps.c  .generated_files/flags/default/60e6f5dabb1749bcd20fe5b769780355e4ee8143 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/system/src" 
@@ -366,12 +384,6 @@ ${OBJECTDIR}/adc.o: adc.c  .generated_files/flags/default/189f7c8834478572ef62d6
 	@${RM} ${OBJECTDIR}/adc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  adc.c  -o ${OBJECTDIR}/adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/adc.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/pwm.o: pwm.c  .generated_files/flags/default/dec84c42ba265b45aa60224d5630a5e16dd8dd2e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/pwm.o.d 
-	@${RM} ${OBJECTDIR}/pwm.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  pwm.c  -o ${OBJECTDIR}/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pwm.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/port_config.o: port_config.c  .generated_files/flags/default/b41fb8a42b1f6a7f19d528c630a0881a56da66e8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/port_config.o.d 
@@ -396,23 +408,11 @@ ${OBJECTDIR}/traps.o: traps.c  .generated_files/flags/default/bdf58d8cca35238bae
 	@${RM} ${OBJECTDIR}/traps.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  traps.c  -o ${OBJECTDIR}/traps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/traps.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o: mcc_generated_files/pwm_hs/src/pwm.c  .generated_files/flags/default/916070742f805524698d800e358cbb99b8abd272 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm_hs/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm_hs/src/pwm.c  -o ${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm_hs/src/pwm.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o: mcc_generated_files/pwm/src/sccp1.c  .generated_files/flags/default/e2a416ed32d05df3857dcd5fcbbdd83786a98145 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/pwm/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/pwm/src/sccp1.c  -o ${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/pwm/src/sccp1.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/mcc_generated_files/dma/src/dma.o: mcc_generated_files/dma/src/dma.c  .generated_files/flags/default/dadd4650a3ae230196213428802fbfed6958423f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/dma/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  mcc_generated_files/dma/src/dma.c  -o ${OBJECTDIR}/mcc_generated_files/dma/src/dma.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/mcc_generated_files/dma/src/dma.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/pwm_manual.o: pwm_manual.c  .generated_files/flags/default/ab4caf442094a9e452867c6038b1d304f0c5af07 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pwm_manual.o.d 
+	@${RM} ${OBJECTDIR}/pwm_manual.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  pwm_manual.c  -o ${OBJECTDIR}/pwm_manual.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/pwm_manual.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

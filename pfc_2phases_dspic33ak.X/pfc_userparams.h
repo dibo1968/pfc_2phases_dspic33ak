@@ -59,7 +59,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "pfc_general.h"
-#include "pwm.h"
+#include "pwm_manual.h"
 // </editor-fold>
 
 // <editor-fold defaultstate="collapsed" desc="DEFINITIONS/MACROS ">

@@ -51,7 +51,7 @@
 #include <xc.h>
 #include <stdint.h>
 
-#include "pwm.h"
+#include "pwm_manual.h"
 #include "pfc_userparams.h"
 
 // </editor-fold>
