@@ -1,16 +1,25 @@
 /**
- * PTG Generated Driver Types Header File
- * 
- * @file      ptg_types.h
- *            
- * @ingroup   ptgdriver
- *            
- * @brief     This is the generated driver types header file for the PTG driver
- *
- * @skipline @version   PLIB Version 1.0.2
- *            
- * @skipline  Device : dsPIC33AK128MC106
+  FLASH Generated Driver Header File
+ 
+  @Company
+    Microchip Technology Inc.
+ 
+  @File Name
+    flash.h
+ 
+  @Summary
+    This is the generated driver header file for the FLASH driver using CCL
+ 
+  @Description
+    This file provides APIs declarations for FLASH driver.
+    Generation Information :
+        Product Revision  :  CCL -
+        Driver Revision   :  0.1.0
+        Device            :  dsPIC33AK128MC106
 */
+
+#ifndef FLASH_H
+#define FLASH_H
 
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -33,23 +42,28 @@
     THIS SOFTWARE.
 */
 
-#ifndef PTG_TYPES_H
-#define PTG_TYPES_H
+/**
+  @Description
+    Initializes FLASH module, using the given initialization data. 
+ 
+  @Preconditions
+    None.
 
-// Section: Data Type Definitions
+  @Param
+    None.
+
+  @Returns
+    None.
+
+  @Example
+    <code>
+      FLASH_Initialize();
+    </code>
+*/
+void FLASH_Initialize (void);
+
+#endif //FLASH_H
 
 /**
- @ingroup  ptgdriver
- @enum     PTG_EVENTS
- @brief    Defines the PTG events that are available.
+ End of File
 */
-enum PTG_EVENTS
-{
-    Trigger0,    /**<PTG Trigger0 Event */
-    Trigger1,    /**<PTG Trigger1 Event */
-    Trigger2,    /**<PTG Trigger2 Event */
-    Trigger3,    /**<PTG Trigger3 Event */
-    WatchDogTimer,    /**<PTG WatchDogTimer Event */
-};
-
-#endif  //PTG_TYPES_H

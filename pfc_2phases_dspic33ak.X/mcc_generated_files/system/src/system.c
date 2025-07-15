@@ -34,10 +34,11 @@
 #include "../clock.h"
 #include "../pins.h"
 #include "../../adc/adc1.h"
+#include "../../adc/adc2.h"
 #include "../../dma/dma.h"
 #include "../dmt.h"
-#include "../../ptg/ptg.h"
-#include "../../peripheral/pwm.h"
+#include "../../peripheral/flash.h"
+#include "../../pwm_hs/pwm.h"
 #include "../../pwm/sccp1.h"
 #include "../interrupt.h"
 
@@ -47,9 +48,10 @@ void SYSTEM_Initialize(void)
     CLOCK_Initialize();
     PINS_Initialize();
     ADC1_Initialize();
+    ADC2_Initialize();
     DMA_Initialize();
     DMT_Initialize();
-    PTG_Initialize();
+    FLASH_Initialize();
     PWM_Initialize();
     SCCP1_PWM_Initialize();
     INTERRUPT_GlobalEnable();

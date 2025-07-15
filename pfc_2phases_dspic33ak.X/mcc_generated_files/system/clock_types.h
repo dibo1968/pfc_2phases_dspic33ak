@@ -47,7 +47,6 @@ enum CLOCK_GENERATOR
     CLOCK_GENERATOR_2 = 2,    /**< Clock Generator 2 */
     CLOCK_GENERATOR_3 = 3,    /**< Clock Generator 3 */
     CLOCK_GENERATOR_6 = 6,    /**< Clock Generator 6 */
-    CLOCK_GENERATOR_10 = 10,    /**< Clock Generator 10 */
     CLOCK_GENERATOR_12 = 12,    /**< Clock Generator 12 */
     
     CLOCK_SYSTEM = 1,    /**< Clock for System */
@@ -55,11 +54,10 @@ enum CLOCK_GENERATOR
     CLOCK_WDT = 3,    /**< Clock for WDT */
     CLOCK_BFRC = 3,    /**< Clock for BFRC */
     CLOCK_ADC = 6,    /**< Clock for ADC */
-    CLOCK_PTG = 10,    /**< Clock for PTG */
     CLOCK_CCP = 12,    /**< Clock for CCP */
     CLOCK_REFO1 = 12,    /**< Clock for REFO1 */
     
-    CLOCK_GENERATOR_MAX = 6
+    CLOCK_GENERATOR_MAX = 5
 };
 
 /**
@@ -73,7 +71,6 @@ enum CLOCK_FAIL_STATUS_MASKS
     CLOCK_GEN2_FAIL_MASK = 0x2,    /**< Fail mask for Clock Generator 2 */
     CLOCK_GEN3_FAIL_MASK = 0x4,    /**< Fail mask for Clock Generator 3 */
     CLOCK_GEN6_FAIL_MASK = 0x20,    /**< Fail mask for Clock Generator 6 */
-    CLOCK_GEN10_FAIL_MASK = 0x200,    /**< Fail mask for Clock Generator 10 */
     CLOCK_GEN12_FAIL_MASK = 0x800,    /**< Fail mask for Clock Generator 12 */
 };
 
