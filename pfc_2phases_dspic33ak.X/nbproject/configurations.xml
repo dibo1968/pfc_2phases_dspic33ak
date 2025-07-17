@@ -14,6 +14,15 @@
           <itemPath>mcc_generated_files/adc/adc_features.h</itemPath>
           <itemPath>mcc_generated_files/adc/adc2.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="clc" displayName="clc" projectFiles="true">
+          <itemPath>mcc_generated_files/clc/clc_interface.h</itemPath>
+          <itemPath>mcc_generated_files/clc/clc1.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="cmp" displayName="cmp" projectFiles="true">
+          <itemPath>mcc_generated_files/cmp/cmp_types.h</itemPath>
+          <itemPath>mcc_generated_files/cmp/cmp_interface.h</itemPath>
+          <itemPath>mcc_generated_files/cmp/cmp1.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="dma" displayName="dma" projectFiles="true">
           <itemPath>mcc_generated_files/dma/dma_interface.h</itemPath>
           <itemPath>mcc_generated_files/dma/dma.h</itemPath>
@@ -21,6 +30,11 @@
         </logicalFolder>
         <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
           <itemPath>mcc_generated_files/peripheral/flash.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="ptg" displayName="ptg" projectFiles="true">
+          <itemPath>mcc_generated_files/ptg/ptg_types.h</itemPath>
+          <itemPath>mcc_generated_files/ptg/ptg.h</itemPath>
+          <itemPath>mcc_generated_files/ptg/ptg_interface.h</itemPath>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/sccp1.h</itemPath>
@@ -73,6 +87,16 @@
             <itemPath>mcc_generated_files/adc/src/adc2.c</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="clc" displayName="clc" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/clc/src/clc1.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="cmp" displayName="cmp" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/cmp/src/cmp1.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="dma" displayName="dma" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/dma/src/dma.c</itemPath>
@@ -81,6 +105,11 @@
         <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/peripheral/src/flash.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="ptg" displayName="ptg" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/ptg/src/ptg.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
@@ -126,19 +155,19 @@
       <itemPath>pfc_pi.c</itemPath>
       <itemPath>pfc_pi.h</itemPath>
       <itemPath>pfc_userparams.h</itemPath>
-      <itemPath>adc.c</itemPath>
-      <itemPath>adc.h</itemPath>
       <itemPath>port_config.c</itemPath>
       <itemPath>port_config.h</itemPath>
       <itemPath>pfc.h</itemPath>
-      <itemPath>clock.c</itemPath>
-      <itemPath>clock.h</itemPath>
-      <itemPath>timer1.c</itemPath>
-      <itemPath>timer1.h</itemPath>
-      <itemPath>delay.h</itemPath>
       <itemPath>traps.c</itemPath>
       <itemPath>pwm_manual.c</itemPath>
       <itemPath>pwm_manual.h</itemPath>
+      <itemPath>adc_manual.c</itemPath>
+      <itemPath>adc_manual.h</itemPath>
+      <itemPath>clock_manual.c</itemPath>
+      <itemPath>clock_manual.h</itemPath>
+      <itemPath>delay_manual.h</itemPath>
+      <itemPath>timer1_manual.c</itemPath>
+      <itemPath>timer1_manual.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

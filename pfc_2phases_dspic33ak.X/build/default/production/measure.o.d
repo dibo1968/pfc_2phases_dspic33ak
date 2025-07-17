@@ -1,5 +1,5 @@
-build/default/production/measure.o: measure.c measure.h adc.h
+build/default/production/measure.o: measure.c measure.h adc_manual.h
 
 measure.h:
 
-adc.h:
+adc_manual.h:

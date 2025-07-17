@@ -54,7 +54,7 @@
 
 #include "board_service.h"
 #include "pfc_userparams.h"
-#include "delay.h"
+#include "delay_manual.h"
 
 // </editor-fold>
 

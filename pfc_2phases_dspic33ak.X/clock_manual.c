@@ -51,7 +51,7 @@
 #include <xc.h>
 #include <stdint.h>
 
-#include "clock.h"
+#include "clock_manual.h"
 
 // </editor-fold>
 

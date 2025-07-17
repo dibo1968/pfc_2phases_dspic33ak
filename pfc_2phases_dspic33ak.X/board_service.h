@@ -59,11 +59,11 @@
 #include "port_config.h"
 /*#include "uart1.h"*/
 #include "pwm_manual.h"
-#include "clock.h"
-#include "adc.h"
+#include "clock_manual.h"
+#include "adc_manual.h"
 #include "measure.h"
 #include "pfc_measure.h"
-#include "timer1.h"
+#include "timer1_manual.h"
 
 // </editor-fold>
 

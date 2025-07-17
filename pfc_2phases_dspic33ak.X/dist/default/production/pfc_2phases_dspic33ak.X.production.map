@@ -39,12 +39,15 @@ Command:
   build/default/production/pfc.o \
   build/default/production/pfc_measure.o \
   build/default/production/pfc_pi.o \
-  build/default/production/adc.o \
   build/default/production/port_config.o \
-  build/default/production/clock.o \
-  build/default/production/timer1.o \
   build/default/production/traps.o \
   build/default/production/pwm_manual.o \
+  build/default/production/adc_manual.o \
+  build/default/production/clock_manual.o \
+  build/default/production/timer1_manual.o \
+  build/default/production/mcc_generated_files/cmp/src/cmp1.o \
+  build/default/production/mcc_generated_files/clc/src/clc1.o \
+  build/default/production/mcc_generated_files/ptg/src/ptg.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33AK128MC106.gld.00 \
   --stack=16 \
@@ -94,29 +97,34 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 __ivt_0                   0x800004               0x47c           0x47c  (1148)
 .text                     0x800480               0x6e8           0x6e8  (1768)
-.text                     0x800b68              0x4ea4          0x4ea4  (20132)
-C:\Users\dinub\AppData\Local\Temp\cc89a4VA.s.scn1  0x805a0c                0xe0            0xe0  (224)
-.text                     0x805aec               0x404           0x404  (1028)
-.dinit                    0x805ef0                0x80            0x80  (128)
-.text                     0x805f70               0x21c           0x21c  (540)
-C:\Users\dinub\AppData\Local\Temp\ccM0IItB.s.scn1  0x80618c                0x30            0x30  (48)
-C:\Users\dinub\AppData\Local\Temp\ccSHK74A.s.scn1  0x8061bc                0x2c            0x2c  (44)
-.text                     0x8061e8                0x48            0x48  (72)
+.text                     0x800b68              0x6048          0x6048  (24648)
+C:\Users\dinub\AppData\Local\Temp\ccFuWZec.s.scn1  0x806bb0                0xe0            0xe0  (224)
+.text                     0x806c90               0x404           0x404  (1028)
+.dinit                    0x807094                0xa4            0xa4  (164)
+.text                     0x807138               0x228           0x228  (552)
+C:\Users\dinub\AppData\Local\Temp\ccaI94Ww.s.scn1  0x807360                0x34            0x34  (52)
+C:\Users\dinub\AppData\Local\Temp\ccn9DWzd.s.scn1  0x807394                0x30            0x30  (48)
+C:\Users\dinub\AppData\Local\Temp\ccTBXc8c.s.scn1  0x8073c4                0x2c            0x2c  (44)
+C:\Users\dinub\AppData\Local\Temp\ccA1xBNC.s.scn1  0x8073f0                0x2c            0x2c  (44)
+.text                     0x80741c                0x24            0x24  (36)
+C:\Users\dinub\AppData\Local\Temp\ccqAgahw.s.scn1  0x807440                0x24            0x24  (36)
+.text                     0x807464                0x24            0x24  (36)
 
-                   Total "program" memory used (bytes):         0x622c  (25132) 19%
+                   Total "program" memory used (bytes):         0x7484  (29828) 22%
 
 
 "data" Memory  [Origin = 0x4000, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                       0x4000                   0            0x3c  (60)
-mcc_generated_files/system/src/where_was_i.s.scn1    0x403c                   0             0x4  (4)
-.ndata                      0x4040                   0             0x2  (2)
-.nbss                       0x4042                   0             0x2  (2)
-.bss                        0x4044                   0           0x108  (264)
+.nbss                       0x4000                   0            0x58  (88)
+mcc_generated_files/system/src/where_was_i.s.scn1    0x4058                   0             0x4  (4)
+.nbss                       0x405c                   0             0x4  (4)
+.ndata                      0x4060                   0             0x2  (2)
+.nbss                       0x4062                   0             0x2  (2)
+.bss                        0x4064                   0           0x108  (264)
 
-                      Total "data" memory used (bytes):          0x14c  (332) 2%
+                      Total "data" memory used (bytes):          0x16c  (364) 2%
 
 
 Dynamic Memory Usage
@@ -124,9 +132,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x414c                              0x3eb4  (16052)
+stack                       0x416c                              0x3e94  (16020)
 
-                        Maximum dynamic memory (bytes):         0x3eb4  (16052)
+                        Maximum dynamic memory (bytes):         0x3e94  (16020)
 
 
 Interrupt Handlers:
@@ -146,20 +154,20 @@ External Symbols in Data Memory (by address):
                     0x4018                  _buttonStartStop
                     0x4020                  _buttonSpeedHalfDouble
                     0x4028                  _boardServiceISRCounter
-                    0x4030                  _calibOffset
-                    0x403c                  _trapSrcAddr
-                    0x4042                  _counter
-                    0x4044                  _pfcParam
+                    0x4044                  _calibOffset
+                    0x4058                  _trapSrcAddr
+                    0x4062                  _counter
+                    0x4064                  _pfcParam
 
 External Symbols in Data Memory (by name):
 
                     0x4028                  _boardServiceISRCounter
                     0x4020                  _buttonSpeedHalfDouble
                     0x4018                  _buttonStartStop
-                    0x4030                  _calibOffset
-                    0x4042                  _counter
-                    0x4044                  _pfcParam
-                    0x403c                  _trapSrcAddr
+                    0x4044                  _calibOffset
+                    0x4062                  _counter
+                    0x4064                  _pfcParam
+                    0x4058                  _trapSrcAddr
 
 External Symbols in Program Memory (by address):
 
@@ -177,161 +185,211 @@ External Symbols in Program Memory (by address):
                   0x800ae4                  __SoftTrapError
                   0x800b1c                  __DefaultInterrupt
                   0x800b54                  ___delay32
-                  0x801c78                  _PWM_Initialize
-                  0x801e68                  _PWM_Deinitialize
-                  0x802038                  _PWM_GeneratorEOCEventCallbackRegister
-                  0x80206c                  _PWM_GeneratorTasks
-                  0x802110                  _PWM_CommonEventTasks
-                  0x802838                  _DMA_Initialize
-                  0x802ae0                  _DMA_Deinitialize
-                  0x802d50                  _DMA_ChannelCallbackRegister
-                  0x802ec0                  _DMA_ChannelTasks
-                  0x803194                  _PFC_StateMachine
-                  0x803530                  _PFC_ServiceInit
-                  0x803c14                  _ADC1_Initialize
-                  0x803ecc                  _ADC1_Deinitialize
-                  0x804188                  _ADC2_Initialize
-                  0x804440                  _ADC2_Deinitialize
-                  0x804798                  _IsPressed_Button1
-                  0x8047c8                  _IsPressed_Button2
-                  0x8047f8                  _BoardServiceStepIsr
-                  0x80481c                  _BoardService
-                  0x80489c                  _BoardServiceInit
-                  0x8049a0                  _HAL_InitPeripherals
-                  0x8049f0                  _HAL_PFCPWMDisableOutputs
-                  0x804a14                  _HAL_PFCPWMEnableOutputs
-                  0x804a28                  _ClearPWMPCIFault
-                  0x804a38                  _InitPWMGenerators
-                  0x804b1c                  _InitPWMGenerator4
-                  0x804d70                  _InitOscillator
-                  0x80508c                  _MCAPP_MeasureCurrentInit
-                  0x8050f4                  _MCAPP_MeasureCurrentOffset
-                  0x805200                  _MCAPP_MeasureCurrentCalibrate
-                  0x80525c                  _MCAPP_MeasureCurrentOffsetStatus
-                  0x805270                  _MCAPP_MeasureAvgInit
-                  0x8052d0                  _MCAPP_MeasureAvg
-                  0x805378                  _SCCP1_PWM_Initialize
-                  0x8053dc                  _SCCP1_PWM_Deinitialize
-                  0x805438                  _SCCP1_PWM_Enable
-                  0x805448                  _SCCP1_PWM_Disable
-                  0x805458                  _SCCP1_PWM_PeriodSet
-                  0x805470                  _SCCP1_PWM_DutyCycleSet
-                  0x805488                  _SCCP1_PWM_SoftwareTriggerSet
-                  0x805498                  _SCCP1_PWM_CallbackRegister
-                  0x8054c4                  _SCCP1_PWM_Tasks
-                  0x8055d4                  _RESET_CauseGet
-                  0x805654                  _RESET_CauseClearAll
-                  0x805668                  _CLOCK_Initialize
-                  0x8057d8                  _DMT_Initialize
-                  0x8057f4                  _DMT_Enable
-                  0x805818                  _DMT_PreClear
-                  0x805834                  _DMT_Clear
-                  0x805864                  _DMT_IsWindowOpen
-                  0x805890                  _DMT_IsPreCleared
-                  0x80589c                  _DMT_PostEventClear
-                  0x8058b8                  _DMT_TimeoutCounterGet
-                  0x8058c4                  _DMT_WindowTimeoutCounterGet
-                  0x8058d0                  _DMT_StatusGet
-                  0x8058f4                  _DMT_CounterGet
-                  0x805900                  _InitializeADCs
-                  0x805a0c                  _PWM_HS
-                  0x805aec                  _SetupGPIOPorts
-                  0x805b6c                  _MapGPIOHWFunction
-                  0x805bc8                  _PFC_ControllerPIUpdate
-                  0x805ca0                  _PFC_MeasureCurrentInit
-                  0x805cd8                  _PFC_MeasureCurrentOffset
-                  0x805d70                  _FLASH_Initialize
-                  0x805e34                  _PINS_Initialize
-                  0x805f70                  _DELAY_milliseconds
-                  0x805f9c                  _DELAY_microseconds
-                  0x806008                  _TIMER1_Initialize
-                  0x8060c0                  _DMT_CalibratedCounterGet
-                  0x8060e0                  _DMT_Calibrate
-                  0x80611c                  _SYSTEM_Initialize
-                  0x80618c                  _DMA
-                  0x8061bc                  _PWM1
-                  0x8061f8                  _main
-                  0x80620c                  _where_was_i
-                  0x806220                  _INTERRUPT_Initialize
-                  0x806228                  _INTERRUPT_Deinitialize
+                  0x802378                  _PWM_Initialize
+                  0x802600                  _PWM_Deinitialize
+                  0x802860                  _PWM_GeneratorEOCEventCallbackRegister
+                  0x802894                  _PWM_GeneratorTasks
+                  0x802988                  _PWM_CommonEventTasks
+                  0x8030b0                  _DMA_Initialize
+                  0x803358                  _DMA_Deinitialize
+                  0x8035c8                  _DMA_ChannelCallbackRegister
+                  0x803738                  _DMA_ChannelTasks
+                  0x803a0c                  _PFC_StateMachine
+                  0x803da8                  _PFC_ServiceInit
+                  0x80448c                  _ADC1_Initialize
+                  0x804744                  _ADC1_Deinitialize
+                  0x804a00                  _ADC2_Initialize
+                  0x804cb8                  _ADC2_Deinitialize
+                  0x804f74                  _PTG_Initialize
+                  0x805118                  _PTG_Deinitialize
+                  0x805180                  _PTG_Enable
+                  0x805190                  _PTG_StepSequenceStart
+                  0x8051a0                  _PTG_SoftwareTriggerSet
+                  0x8051b0                  _PTG_SoftwareTriggerClear
+                  0x8051c0                  _PTG_WatchdogTimeoutStatusGet
+                  0x8051ec                  _PTG_StepSequenceStop
+                  0x8051fc                  _PTG_Disable
+                  0x80520c                  _PTG_EventCallbackRegister
+                  0x80531c                  _PTG_Tasks
+                  0x805534                  _IsPressed_Button1
+                  0x805564                  _IsPressed_Button2
+                  0x805594                  _BoardServiceStepIsr
+                  0x8055b8                  _BoardService
+                  0x805638                  _BoardServiceInit
+                  0x80573c                  _HAL_InitPeripherals
+                  0x80578c                  _HAL_PFCPWMDisableOutputs
+                  0x8057b0                  _HAL_PFCPWMEnableOutputs
+                  0x8057c4                  _ClearPWMPCIFault
+                  0x8057d4                  _InitPWMGenerators
+                  0x8058b8                  _InitPWMGenerator4
+                  0x805b0c                  _InitOscillator
+                  0x805e28                  _MCAPP_MeasureCurrentInit
+                  0x805e90                  _MCAPP_MeasureCurrentOffset
+                  0x805f9c                  _MCAPP_MeasureCurrentCalibrate
+                  0x805ff8                  _MCAPP_MeasureCurrentOffsetStatus
+                  0x80600c                  _MCAPP_MeasureAvgInit
+                  0x80606c                  _MCAPP_MeasureAvg
+                  0x8061ac                  _CMP1_Initialize
+                  0x806204                  _CMP1_Deinitialize
+                  0x80624c                  _CMP1_Calibrate
+                  0x8062e4                  _CMP1_EventCallbackRegister
+                  0x806310                  _CMP1_Tasks
+                  0x80634c                  _CLOCK_Initialize
+                  0x806504                  _SCCP1_PWM_Initialize
+                  0x806568                  _SCCP1_PWM_Deinitialize
+                  0x8065c4                  _SCCP1_PWM_Enable
+                  0x8065d4                  _SCCP1_PWM_Disable
+                  0x8065e4                  _SCCP1_PWM_PeriodSet
+                  0x8065fc                  _SCCP1_PWM_DutyCycleSet
+                  0x806614                  _SCCP1_PWM_SoftwareTriggerSet
+                  0x806624                  _SCCP1_PWM_CallbackRegister
+                  0x806650                  _SCCP1_PWM_Tasks
+                  0x806760                  _RESET_CauseGet
+                  0x8067e0                  _RESET_CauseClearAll
+                  0x806814                  _CLC1_Initialize
+                  0x80684c                  _CLC1_Deinitialize
+                  0x806874                  _CLC1_PositiveEdgeCallbackRegister
+                  0x8068a0                  _CLC1_NegativeEdgeCallbackRegister
+                  0x8068cc                  _CLC1_Tasks
+                  0x806930                  _CLC1_OutputStatusGet
+                  0x80697c                  _DMT_Initialize
+                  0x806998                  _DMT_Enable
+                  0x8069bc                  _DMT_PreClear
+                  0x8069d8                  _DMT_Clear
+                  0x806a08                  _DMT_IsWindowOpen
+                  0x806a34                  _DMT_IsPreCleared
+                  0x806a40                  _DMT_PostEventClear
+                  0x806a5c                  _DMT_TimeoutCounterGet
+                  0x806a68                  _DMT_WindowTimeoutCounterGet
+                  0x806a74                  _DMT_StatusGet
+                  0x806a98                  _DMT_CounterGet
+                  0x806aa4                  _InitializeADCs
+                  0x806bb0                  _PWM_HS
+                  0x806c90                  _SetupGPIOPorts
+                  0x806d10                  _MapGPIOHWFunction
+                  0x806d6c                  _PFC_ControllerPIUpdate
+                  0x806e44                  _PFC_MeasureCurrentInit
+                  0x806e7c                  _PFC_MeasureCurrentOffset
+                  0x806f14                  _FLASH_Initialize
+                  0x806fd8                  _PINS_Initialize
+                  0x807138                  _DELAY_milliseconds
+                  0x807164                  _DELAY_microseconds
+                  0x8071d0                  _TIMER1_Initialize
+                  0x807294                  _SYSTEM_Initialize
+                  0x8072dc                  _DMT_CalibratedCounterGet
+                  0x8072fc                  _DMT_Calibrate
+                  0x80736c                  _CMP_DAC1
+                  0x807394                  _DMA
+                  0x8073c4                  _PWM1
+                  0x8073f0                  _PTG
+                  0x80742c                  _main
+                  0x807440                  _CLC1
+                  0x807464                  _where_was_i
+                  0x807478                  _INTERRUPT_Initialize
+                  0x807480                  _INTERRUPT_Deinitialize
 
 External Symbols in Program Memory (by name):
 
-                  0x803ecc                  _ADC1_Deinitialize
-                  0x803c14                  _ADC1_Initialize
-                  0x804440                  _ADC2_Deinitialize
-                  0x804188                  _ADC2_Initialize
-                  0x80481c                  _BoardService
-                  0x80489c                  _BoardServiceInit
-                  0x8047f8                  _BoardServiceStepIsr
-                  0x805668                  _CLOCK_Initialize
-                  0x804a28                  _ClearPWMPCIFault
-                  0x805f9c                  _DELAY_microseconds
-                  0x805f70                  _DELAY_milliseconds
-                  0x80618c                  _DMA
-                  0x802d50                  _DMA_ChannelCallbackRegister
-                  0x802ec0                  _DMA_ChannelTasks
-                  0x802ae0                  _DMA_Deinitialize
-                  0x802838                  _DMA_Initialize
-                  0x8060e0                  _DMT_Calibrate
-                  0x8060c0                  _DMT_CalibratedCounterGet
-                  0x805834                  _DMT_Clear
-                  0x8058f4                  _DMT_CounterGet
-                  0x8057f4                  _DMT_Enable
-                  0x8057d8                  _DMT_Initialize
-                  0x805890                  _DMT_IsPreCleared
-                  0x805864                  _DMT_IsWindowOpen
-                  0x80589c                  _DMT_PostEventClear
-                  0x805818                  _DMT_PreClear
-                  0x8058d0                  _DMT_StatusGet
-                  0x8058b8                  _DMT_TimeoutCounterGet
-                  0x8058c4                  _DMT_WindowTimeoutCounterGet
-                  0x805d70                  _FLASH_Initialize
-                  0x8049a0                  _HAL_InitPeripherals
-                  0x8049f0                  _HAL_PFCPWMDisableOutputs
-                  0x804a14                  _HAL_PFCPWMEnableOutputs
-                  0x806228                  _INTERRUPT_Deinitialize
-                  0x806220                  _INTERRUPT_Initialize
-                  0x804d70                  _InitOscillator
-                  0x804b1c                  _InitPWMGenerator4
-                  0x804a38                  _InitPWMGenerators
-                  0x805900                  _InitializeADCs
-                  0x804798                  _IsPressed_Button1
-                  0x8047c8                  _IsPressed_Button2
-                  0x8052d0                  _MCAPP_MeasureAvg
-                  0x805270                  _MCAPP_MeasureAvgInit
-                  0x805200                  _MCAPP_MeasureCurrentCalibrate
-                  0x80508c                  _MCAPP_MeasureCurrentInit
-                  0x8050f4                  _MCAPP_MeasureCurrentOffset
-                  0x80525c                  _MCAPP_MeasureCurrentOffsetStatus
-                  0x805b6c                  _MapGPIOHWFunction
-                  0x805bc8                  _PFC_ControllerPIUpdate
-                  0x805ca0                  _PFC_MeasureCurrentInit
-                  0x805cd8                  _PFC_MeasureCurrentOffset
-                  0x803530                  _PFC_ServiceInit
-                  0x803194                  _PFC_StateMachine
-                  0x805e34                  _PINS_Initialize
-                  0x8061bc                  _PWM1
-                  0x802110                  _PWM_CommonEventTasks
-                  0x801e68                  _PWM_Deinitialize
-                  0x802038                  _PWM_GeneratorEOCEventCallbackRegister
-                  0x80206c                  _PWM_GeneratorTasks
-                  0x805a0c                  _PWM_HS
-                  0x801c78                  _PWM_Initialize
-                  0x805654                  _RESET_CauseClearAll
-                  0x8055d4                  _RESET_CauseGet
-                  0x805498                  _SCCP1_PWM_CallbackRegister
-                  0x8053dc                  _SCCP1_PWM_Deinitialize
-                  0x805448                  _SCCP1_PWM_Disable
-                  0x805470                  _SCCP1_PWM_DutyCycleSet
-                  0x805438                  _SCCP1_PWM_Enable
-                  0x805378                  _SCCP1_PWM_Initialize
-                  0x805458                  _SCCP1_PWM_PeriodSet
-                  0x805488                  _SCCP1_PWM_SoftwareTriggerSet
-                  0x8054c4                  _SCCP1_PWM_Tasks
-                  0x80611c                  _SYSTEM_Initialize
-                  0x805aec                  _SetupGPIOPorts
-                  0x806008                  _TIMER1_Initialize
+                  0x804744                  _ADC1_Deinitialize
+                  0x80448c                  _ADC1_Initialize
+                  0x804cb8                  _ADC2_Deinitialize
+                  0x804a00                  _ADC2_Initialize
+                  0x8055b8                  _BoardService
+                  0x805638                  _BoardServiceInit
+                  0x805594                  _BoardServiceStepIsr
+                  0x807440                  _CLC1
+                  0x80684c                  _CLC1_Deinitialize
+                  0x806814                  _CLC1_Initialize
+                  0x8068a0                  _CLC1_NegativeEdgeCallbackRegister
+                  0x806930                  _CLC1_OutputStatusGet
+                  0x806874                  _CLC1_PositiveEdgeCallbackRegister
+                  0x8068cc                  _CLC1_Tasks
+                  0x80634c                  _CLOCK_Initialize
+                  0x80624c                  _CMP1_Calibrate
+                  0x806204                  _CMP1_Deinitialize
+                  0x8062e4                  _CMP1_EventCallbackRegister
+                  0x8061ac                  _CMP1_Initialize
+                  0x806310                  _CMP1_Tasks
+                  0x80736c                  _CMP_DAC1
+                  0x8057c4                  _ClearPWMPCIFault
+                  0x807164                  _DELAY_microseconds
+                  0x807138                  _DELAY_milliseconds
+                  0x807394                  _DMA
+                  0x8035c8                  _DMA_ChannelCallbackRegister
+                  0x803738                  _DMA_ChannelTasks
+                  0x803358                  _DMA_Deinitialize
+                  0x8030b0                  _DMA_Initialize
+                  0x8072fc                  _DMT_Calibrate
+                  0x8072dc                  _DMT_CalibratedCounterGet
+                  0x8069d8                  _DMT_Clear
+                  0x806a98                  _DMT_CounterGet
+                  0x806998                  _DMT_Enable
+                  0x80697c                  _DMT_Initialize
+                  0x806a34                  _DMT_IsPreCleared
+                  0x806a08                  _DMT_IsWindowOpen
+                  0x806a40                  _DMT_PostEventClear
+                  0x8069bc                  _DMT_PreClear
+                  0x806a74                  _DMT_StatusGet
+                  0x806a5c                  _DMT_TimeoutCounterGet
+                  0x806a68                  _DMT_WindowTimeoutCounterGet
+                  0x806f14                  _FLASH_Initialize
+                  0x80573c                  _HAL_InitPeripherals
+                  0x80578c                  _HAL_PFCPWMDisableOutputs
+                  0x8057b0                  _HAL_PFCPWMEnableOutputs
+                  0x807480                  _INTERRUPT_Deinitialize
+                  0x807478                  _INTERRUPT_Initialize
+                  0x805b0c                  _InitOscillator
+                  0x8058b8                  _InitPWMGenerator4
+                  0x8057d4                  _InitPWMGenerators
+                  0x806aa4                  _InitializeADCs
+                  0x805534                  _IsPressed_Button1
+                  0x805564                  _IsPressed_Button2
+                  0x80606c                  _MCAPP_MeasureAvg
+                  0x80600c                  _MCAPP_MeasureAvgInit
+                  0x805f9c                  _MCAPP_MeasureCurrentCalibrate
+                  0x805e28                  _MCAPP_MeasureCurrentInit
+                  0x805e90                  _MCAPP_MeasureCurrentOffset
+                  0x805ff8                  _MCAPP_MeasureCurrentOffsetStatus
+                  0x806d10                  _MapGPIOHWFunction
+                  0x806d6c                  _PFC_ControllerPIUpdate
+                  0x806e44                  _PFC_MeasureCurrentInit
+                  0x806e7c                  _PFC_MeasureCurrentOffset
+                  0x803da8                  _PFC_ServiceInit
+                  0x803a0c                  _PFC_StateMachine
+                  0x806fd8                  _PINS_Initialize
+                  0x8073f0                  _PTG
+                  0x805118                  _PTG_Deinitialize
+                  0x8051fc                  _PTG_Disable
+                  0x805180                  _PTG_Enable
+                  0x80520c                  _PTG_EventCallbackRegister
+                  0x804f74                  _PTG_Initialize
+                  0x8051b0                  _PTG_SoftwareTriggerClear
+                  0x8051a0                  _PTG_SoftwareTriggerSet
+                  0x805190                  _PTG_StepSequenceStart
+                  0x8051ec                  _PTG_StepSequenceStop
+                  0x80531c                  _PTG_Tasks
+                  0x8051c0                  _PTG_WatchdogTimeoutStatusGet
+                  0x8073c4                  _PWM1
+                  0x802988                  _PWM_CommonEventTasks
+                  0x802600                  _PWM_Deinitialize
+                  0x802860                  _PWM_GeneratorEOCEventCallbackRegister
+                  0x802894                  _PWM_GeneratorTasks
+                  0x806bb0                  _PWM_HS
+                  0x802378                  _PWM_Initialize
+                  0x8067e0                  _RESET_CauseClearAll
+                  0x806760                  _RESET_CauseGet
+                  0x806624                  _SCCP1_PWM_CallbackRegister
+                  0x806568                  _SCCP1_PWM_Deinitialize
+                  0x8065d4                  _SCCP1_PWM_Disable
+                  0x8065fc                  _SCCP1_PWM_DutyCycleSet
+                  0x8065c4                  _SCCP1_PWM_Enable
+                  0x806504                  _SCCP1_PWM_Initialize
+                  0x8065e4                  _SCCP1_PWM_PeriodSet
+                  0x806614                  _SCCP1_PWM_SoftwareTriggerSet
+                  0x806650                  _SCCP1_PWM_Tasks
+                  0x807294                  _SYSTEM_Initialize
+                  0x806c90                  _SetupGPIOPorts
+                  0x8071d0                  _TIMER1_Initialize
                   0x800890                  __AD1CH1Interrupt
                   0x800a04                  __AddressError
                   0x800b1c                  __DefaultInterrupt
@@ -346,8 +404,8 @@ External Symbols in Program Memory (by name):
                   0x80052c                  __data_init_extended
                   0x800004                  __ivt_0
                   0x800480                  __resetPRI
-                  0x8061f8                  _main
-                  0x80620c                  _where_was_i
+                  0x80742c                  _main
+                  0x807464                  _where_was_i
 
 Memory Configuration
 
@@ -415,12 +473,15 @@ LOAD build/default/production/measure.o
 LOAD build/default/production/pfc.o
 LOAD build/default/production/pfc_measure.o
 LOAD build/default/production/pfc_pi.o
-LOAD build/default/production/adc.o
 LOAD build/default/production/port_config.o
-LOAD build/default/production/clock.o
-LOAD build/default/production/timer1.o
 LOAD build/default/production/traps.o
 LOAD build/default/production/pwm_manual.o
+LOAD build/default/production/adc_manual.o
+LOAD build/default/production/clock_manual.o
+LOAD build/default/production/timer1_manual.o
+LOAD build/default/production/mcc_generated_files/cmp/src/cmp1.o
+LOAD build/default/production/mcc_generated_files/clc/src/clc1.o
+LOAD build/default/production/mcc_generated_files/ptg/src/ptg.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33AK128MC106
 LOAD c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libfx-elf.a
@@ -470,8 +531,8 @@ LOAD c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libfx-elf.a
 .text             0x800480        0x6e8
  *(.init)
  .init            0x800480         0xac c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedaa.o)
-                  0x800480                  __resetPRI
                   0x800480                  __reset
+                  0x800480                  __resetPRI
  .init            0x80052c         0x60 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedaa.o)
                   0x80052c                  __data_init_extended
                   0x80052c                  __data_init
@@ -610,7 +671,7 @@ __FEPUCB
 __FWPUCB
  *(__FWPUCB.sec*)
 
-.comment            0x0000        0x948
+.comment            0x0000        0xa50
  *(.comment)
  .comment           0x0000         0x58 build/default/production/mcc_generated_files/adc/src/adc1.o
  .comment           0x0058         0x58 build/default/production/mcc_generated_files/adc/src/adc2.o
@@ -633,46 +694,52 @@ __FWPUCB
  .comment           0x0630         0x58 build/default/production/pfc.o
  .comment           0x0688         0x58 build/default/production/pfc_measure.o
  .comment           0x06e0         0x58 build/default/production/pfc_pi.o
- .comment           0x0738         0x58 build/default/production/adc.o
- .comment           0x0790         0x58 build/default/production/port_config.o
- .comment           0x07e8         0x58 build/default/production/clock.o
- .comment           0x0840         0x58 build/default/production/timer1.o
- .comment           0x0898         0x58 build/default/production/traps.o
- .comment           0x08f0         0x58 build/default/production/pwm_manual.o
+ .comment           0x0738         0x58 build/default/production/port_config.o
+ .comment           0x0790         0x58 build/default/production/traps.o
+ .comment           0x07e8         0x58 build/default/production/pwm_manual.o
+ .comment           0x0840         0x58 build/default/production/adc_manual.o
+ .comment           0x0898         0x58 build/default/production/clock_manual.o
+ .comment           0x08f0         0x58 build/default/production/timer1_manual.o
+ .comment           0x0948         0x58 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .comment           0x09a0         0x58 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .comment           0x09f8         0x58 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
-.debug_info         0x0000      0x12340
+.debug_info         0x0000      0x1555f
  *(.debug_info)
  .debug_info        0x0000        0xb71 build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_info        0x0b71        0xb71 build/default/production/mcc_generated_files/adc/src/adc2.o
  .debug_info        0x16e2       0x2313 build/default/production/mcc_generated_files/dma/src/dma.o
  .debug_info        0x39f5        0x432 build/default/production/mcc_generated_files/peripheral/src/flash.o
  .debug_info        0x3e27        0xc20 build/default/production/mcc_generated_files/pwm/src/sccp1.o
- .debug_info        0x4a47       0x31e6 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
- .debug_info        0x7c2d        0x7a3 build/default/production/mcc_generated_files/system/src/traps.o
- .debug_info        0x83d0        0x25f build/default/production/mcc_generated_files/system/src/system.o
- .debug_info        0x862f        0x518 build/default/production/mcc_generated_files/system/src/dmt.o
- .debug_info        0x8b47        0x942 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_info        0x9489         0x26 build/default/production/mcc_generated_files/system/src/where_was_i.o
- .debug_info        0x94af        0x4b1 build/default/production/mcc_generated_files/system/src/reset.o
- .debug_info        0x9960         0x26 build/default/production/mcc_generated_files/system/src/dmt_asm.o
- .debug_info        0x9986        0x25d build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_info        0x9be3        0x3af build/default/production/mcc_generated_files/system/src/pins.o
- .debug_info        0x9f92        0x2aa build/default/production/mcc_generated_files/timer/src/delay.o
- .debug_info        0xa23c        0x4e9 build/default/production/main.o
- .debug_info        0xa725       0x164f build/default/production/board_service.o
- .debug_info        0xbd74        0x64a build/default/production/measure.o
- .debug_info        0xc3be       0x10c6 build/default/production/pfc.o
- .debug_info        0xd484        0x32f build/default/production/pfc_measure.o
- .debug_info        0xd7b3        0x342 build/default/production/pfc_pi.o
- .debug_info        0xdaf5        0xf09 build/default/production/adc.o
- .debug_info        0xe9fe        0xcde build/default/production/port_config.o
- .debug_info        0xf6dc        0xf4d build/default/production/clock.o
- .debug_info        0x10629        0x893 build/default/production/timer1.o
- .debug_info        0x10ebc        0x395 build/default/production/traps.o
- .debug_info        0x11251       0x10ef build/default/production/pwm_manual.o
+ .debug_info        0x4a47       0x3a17 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
+ .debug_info        0x845e        0x7a3 build/default/production/mcc_generated_files/system/src/traps.o
+ .debug_info        0x8c01        0x25f build/default/production/mcc_generated_files/system/src/system.o
+ .debug_info        0x8e60        0x518 build/default/production/mcc_generated_files/system/src/dmt.o
+ .debug_info        0x9378        0xbff build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_info        0x9f77         0x26 build/default/production/mcc_generated_files/system/src/where_was_i.o
+ .debug_info        0x9f9d        0x4b1 build/default/production/mcc_generated_files/system/src/reset.o
+ .debug_info        0xa44e         0x26 build/default/production/mcc_generated_files/system/src/dmt_asm.o
+ .debug_info        0xa474        0x25d build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_info        0xa6d1        0x3af build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_info        0xaa80        0x2aa build/default/production/mcc_generated_files/timer/src/delay.o
+ .debug_info        0xad2a        0x4e9 build/default/production/main.o
+ .debug_info        0xb213       0x164f build/default/production/board_service.o
+ .debug_info        0xc862        0x64a build/default/production/measure.o
+ .debug_info        0xceac       0x10c6 build/default/production/pfc.o
+ .debug_info        0xdf72        0x32f build/default/production/pfc_measure.o
+ .debug_info        0xe2a1        0x342 build/default/production/pfc_pi.o
+ .debug_info        0xe5e3        0xcde build/default/production/port_config.o
+ .debug_info        0xf2c1        0x395 build/default/production/traps.o
+ .debug_info        0xf656       0x10ef build/default/production/pwm_manual.o
+ .debug_info        0x10745        0xf10 build/default/production/adc_manual.o
+ .debug_info        0x11655        0xf54 build/default/production/clock_manual.o
+ .debug_info        0x125a9        0x89a build/default/production/timer1_manual.o
+ .debug_info        0x12e43        0xd9c build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_info        0x13bdf        0x856 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_info        0x14435       0x112a build/default/production/mcc_generated_files/ptg/src/ptg.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev       0x0000       0x1828
+.debug_abbrev       0x0000       0x1d8d
  *(.debug_abbrev)
  .debug_abbrev      0x0000         0x9b build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_abbrev      0x009b         0x9b build/default/production/mcc_generated_files/adc/src/adc2.o
@@ -696,46 +763,52 @@ __FWPUCB
  .debug_abbrev      0x10f3        0x1ee build/default/production/pfc.o
  .debug_abbrev      0x12e1         0xa0 build/default/production/pfc_measure.o
  .debug_abbrev      0x1381         0x97 build/default/production/pfc_pi.o
- .debug_abbrev      0x1418         0xb2 build/default/production/adc.o
- .debug_abbrev      0x14ca         0xb5 build/default/production/port_config.o
- .debug_abbrev      0x157f         0xb2 build/default/production/clock.o
- .debug_abbrev      0x1631         0xb3 build/default/production/timer1.o
- .debug_abbrev      0x16e4         0x8f build/default/production/traps.o
- .debug_abbrev      0x1773         0xb5 build/default/production/pwm_manual.o
+ .debug_abbrev      0x1418         0xb5 build/default/production/port_config.o
+ .debug_abbrev      0x14cd         0x8f build/default/production/traps.o
+ .debug_abbrev      0x155c         0xb5 build/default/production/pwm_manual.o
+ .debug_abbrev      0x1611         0xb2 build/default/production/adc_manual.o
+ .debug_abbrev      0x16c3         0xb2 build/default/production/clock_manual.o
+ .debug_abbrev      0x1775         0xb3 build/default/production/timer1_manual.o
+ .debug_abbrev      0x1828        0x1e2 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_abbrev      0x1a0a        0x19b build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_abbrev      0x1ba5        0x1e8 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
-.debug_line         0x0000       0x3356
+.debug_line         0x0000       0x3ca7
  *(.debug_line)
  .debug_line        0x0000        0x1fa build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_line        0x01fa        0x1fa build/default/production/mcc_generated_files/adc/src/adc2.o
  .debug_line        0x03f4        0x59e build/default/production/mcc_generated_files/dma/src/dma.o
  .debug_line        0x0992        0x14c build/default/production/mcc_generated_files/peripheral/src/flash.o
  .debug_line        0x0ade        0x1db build/default/production/mcc_generated_files/pwm/src/sccp1.o
- .debug_line        0x0cb9        0x8ec build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
- .debug_line        0x15a5        0x1d8 build/default/production/mcc_generated_files/system/src/traps.o
- .debug_line        0x177d         0xa6 build/default/production/mcc_generated_files/system/src/system.o
- .debug_line        0x1823        0x1d3 build/default/production/mcc_generated_files/system/src/dmt.o
- .debug_line        0x19f6        0x184 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_line        0x1b7a         0x61 build/default/production/mcc_generated_files/system/src/where_was_i.o
- .debug_line        0x1bdb        0x1da build/default/production/mcc_generated_files/system/src/reset.o
- .debug_line        0x1db5         0x72 build/default/production/mcc_generated_files/system/src/dmt_asm.o
- .debug_line        0x1e27         0x5f build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_line        0x1e86          0x0 build/default/production/mcc_generated_files/system/src/config_bits.o
- .debug_line        0x1e86        0x136 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_line        0x1fbc         0xcc build/default/production/mcc_generated_files/timer/src/delay.o
- .debug_line        0x2088        0x132 build/default/production/main.o
- .debug_line        0x21ba        0x23c build/default/production/board_service.o
- .debug_line        0x23f6        0x182 build/default/production/measure.o
- .debug_line        0x2578        0x46c build/default/production/pfc.o
- .debug_line        0x29e4         0xd4 build/default/production/pfc_measure.o
- .debug_line        0x2ab8         0x9c build/default/production/pfc_pi.o
- .debug_line        0x2b54        0x129 build/default/production/adc.o
- .debug_line        0x2c7d        0x141 build/default/production/port_config.o
- .debug_line        0x2dbe        0x1fb build/default/production/clock.o
- .debug_line        0x2fb9        0x13b build/default/production/timer1.o
- .debug_line        0x30f4         0xa3 build/default/production/traps.o
- .debug_line        0x3197        0x1bf build/default/production/pwm_manual.o
+ .debug_line        0x0cb9        0xb46 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
+ .debug_line        0x17ff        0x1d8 build/default/production/mcc_generated_files/system/src/traps.o
+ .debug_line        0x19d7         0xa9 build/default/production/mcc_generated_files/system/src/system.o
+ .debug_line        0x1a80        0x1d3 build/default/production/mcc_generated_files/system/src/dmt.o
+ .debug_line        0x1c53        0x1a4 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_line        0x1df7         0x61 build/default/production/mcc_generated_files/system/src/where_was_i.o
+ .debug_line        0x1e58        0x1da build/default/production/mcc_generated_files/system/src/reset.o
+ .debug_line        0x2032         0x72 build/default/production/mcc_generated_files/system/src/dmt_asm.o
+ .debug_line        0x20a4         0x5f build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_line        0x2103          0x0 build/default/production/mcc_generated_files/system/src/config_bits.o
+ .debug_line        0x2103        0x136 build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_line        0x2239         0xcc build/default/production/mcc_generated_files/timer/src/delay.o
+ .debug_line        0x2305        0x139 build/default/production/main.o
+ .debug_line        0x243e        0x243 build/default/production/board_service.o
+ .debug_line        0x2681        0x182 build/default/production/measure.o
+ .debug_line        0x2803        0x46c build/default/production/pfc.o
+ .debug_line        0x2c6f         0xd4 build/default/production/pfc_measure.o
+ .debug_line        0x2d43         0x9c build/default/production/pfc_pi.o
+ .debug_line        0x2ddf        0x141 build/default/production/port_config.o
+ .debug_line        0x2f20         0xa3 build/default/production/traps.o
+ .debug_line        0x2fc3        0x1bf build/default/production/pwm_manual.o
+ .debug_line        0x3182        0x130 build/default/production/adc_manual.o
+ .debug_line        0x32b2        0x202 build/default/production/clock_manual.o
+ .debug_line        0x34b4        0x149 build/default/production/timer1_manual.o
+ .debug_line        0x35fd        0x206 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_line        0x3803        0x1c4 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_line        0x39c7        0x2e0 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
-.debug_frame        0x0000       0x145c
+.debug_frame        0x0000       0x1828
  *(.debug_frame)
  .debug_frame       0x0000         0x44 build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_frame       0x0044         0x44 build/default/production/mcc_generated_files/adc/src/adc2.o
@@ -757,46 +830,52 @@ __FWPUCB
  .debug_frame       0x0f88        0x158 build/default/production/pfc.o
  .debug_frame       0x10e0         0x44 build/default/production/pfc_measure.o
  .debug_frame       0x1124         0x2c build/default/production/pfc_pi.o
- .debug_frame       0x1150         0x2c build/default/production/adc.o
- .debug_frame       0x117c         0x44 build/default/production/port_config.o
- .debug_frame       0x11c0         0x2c build/default/production/clock.o
- .debug_frame       0x11ec         0x5c build/default/production/timer1.o
- .debug_frame       0x1248        0x1d0 build/default/production/traps.o
- .debug_frame       0x1418         0x44 build/default/production/pwm_manual.o
+ .debug_frame       0x1150         0x44 build/default/production/port_config.o
+ .debug_frame       0x1194        0x1d0 build/default/production/traps.o
+ .debug_frame       0x1364         0x44 build/default/production/pwm_manual.o
+ .debug_frame       0x13a8         0x2c build/default/production/adc_manual.o
+ .debug_frame       0x13d4         0x2c build/default/production/clock_manual.o
+ .debug_frame       0x1400         0x5c build/default/production/timer1_manual.o
+ .debug_frame       0x145c        0x134 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_frame       0x1590        0x104 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_frame       0x1694        0x194 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
-.debug_str          0x0000        0x36f
+.debug_str          0x0000        0x452
  *(.debug_str)
  .debug_str         0x0000          0x0 build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_str         0x0000          0x0 build/default/production/mcc_generated_files/adc/src/adc2.o
  .debug_str         0x0000         0xb9 build/default/production/mcc_generated_files/dma/src/dma.o
  .debug_str         0x00b9          0x0 build/default/production/mcc_generated_files/peripheral/src/flash.o
  .debug_str         0x00b9          0x0 build/default/production/mcc_generated_files/pwm/src/sccp1.o
- .debug_str         0x00b9         0x88 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
- .debug_str         0x0141          0xd build/default/production/mcc_generated_files/system/src/traps.o
- .debug_str         0x014e          0x0 build/default/production/mcc_generated_files/system/src/system.o
- .debug_str         0x014e          0x0 build/default/production/mcc_generated_files/system/src/dmt.o
- .debug_str         0x014e         0x2d build/default/production/mcc_generated_files/system/src/clock.o
- .debug_str         0x017b         0x85 build/default/production/mcc_generated_files/system/src/where_was_i.o
- .debug_str         0x0200         0x17 build/default/production/mcc_generated_files/system/src/reset.o
- .debug_str         0x0217         0x81 build/default/production/mcc_generated_files/system/src/dmt_asm.o
- .debug_str         0x0298          0x0 build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_str         0x0298          0x0 build/default/production/mcc_generated_files/system/src/config_bits.o
- .debug_str         0x0298          0x0 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_str         0x0298          0x0 build/default/production/mcc_generated_files/timer/src/delay.o
- .debug_str         0x0298          0x0 build/default/production/main.o
- .debug_str         0x0298          0x0 build/default/production/board_service.o
- .debug_str         0x0298         0x22 build/default/production/measure.o
- .debug_str         0x02ba         0x20 build/default/production/pfc.o
- .debug_str         0x02da          0x9 build/default/production/pfc_measure.o
- .debug_str         0x02e3          0x0 build/default/production/pfc_pi.o
- .debug_str         0x02e3         0x3c build/default/production/adc.o
- .debug_str         0x031f          0x0 build/default/production/port_config.o
- .debug_str         0x031f         0x50 build/default/production/clock.o
- .debug_str         0x036f          0x0 build/default/production/timer1.o
- .debug_str         0x036f          0x0 build/default/production/traps.o
- .debug_str         0x036f          0x0 build/default/production/pwm_manual.o
+ .debug_str         0x00b9        0x148 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
+ .debug_str         0x0201          0xd build/default/production/mcc_generated_files/system/src/traps.o
+ .debug_str         0x020e          0x0 build/default/production/mcc_generated_files/system/src/system.o
+ .debug_str         0x020e          0x0 build/default/production/mcc_generated_files/system/src/dmt.o
+ .debug_str         0x020e         0x41 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_str         0x024f         0x85 build/default/production/mcc_generated_files/system/src/where_was_i.o
+ .debug_str         0x02d4         0x17 build/default/production/mcc_generated_files/system/src/reset.o
+ .debug_str         0x02eb         0x81 build/default/production/mcc_generated_files/system/src/dmt_asm.o
+ .debug_str         0x036c          0x0 build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_str         0x036c          0x0 build/default/production/mcc_generated_files/system/src/config_bits.o
+ .debug_str         0x036c          0x0 build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_str         0x036c          0x0 build/default/production/mcc_generated_files/timer/src/delay.o
+ .debug_str         0x036c          0x0 build/default/production/main.o
+ .debug_str         0x036c          0x0 build/default/production/board_service.o
+ .debug_str         0x036c         0x22 build/default/production/measure.o
+ .debug_str         0x038e         0x20 build/default/production/pfc.o
+ .debug_str         0x03ae          0x9 build/default/production/pfc_measure.o
+ .debug_str         0x03b7          0x0 build/default/production/pfc_pi.o
+ .debug_str         0x03b7          0x0 build/default/production/port_config.o
+ .debug_str         0x03b7          0x0 build/default/production/traps.o
+ .debug_str         0x03b7          0x0 build/default/production/pwm_manual.o
+ .debug_str         0x03b7         0x3c build/default/production/adc_manual.o
+ .debug_str         0x03f3         0x50 build/default/production/clock_manual.o
+ .debug_str         0x0443          0x0 build/default/production/timer1_manual.o
+ .debug_str         0x0443          0xf build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_str         0x0452          0x0 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_str         0x0452          0x0 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
-.debug_loc          0x0000       0x15a0
+.debug_loc          0x0000       0x1a60
  *(.debug_loc)
  .debug_loc         0x0000         0x40 build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_loc         0x0040         0x40 build/default/production/mcc_generated_files/adc/src/adc2.o
@@ -818,12 +897,15 @@ __FWPUCB
  .debug_loc         0x11a0        0x180 build/default/production/pfc.o
  .debug_loc         0x1320         0x40 build/default/production/pfc_measure.o
  .debug_loc         0x1360         0x20 build/default/production/pfc_pi.o
- .debug_loc         0x1380         0x20 build/default/production/adc.o
- .debug_loc         0x13a0         0x40 build/default/production/port_config.o
- .debug_loc         0x13e0         0x20 build/default/production/clock.o
- .debug_loc         0x1400         0x60 build/default/production/timer1.o
- .debug_loc         0x1460        0x100 build/default/production/traps.o
- .debug_loc         0x1560         0x40 build/default/production/pwm_manual.o
+ .debug_loc         0x1380         0x40 build/default/production/port_config.o
+ .debug_loc         0x13c0        0x100 build/default/production/traps.o
+ .debug_loc         0x14c0         0x40 build/default/production/pwm_manual.o
+ .debug_loc         0x1500         0x20 build/default/production/adc_manual.o
+ .debug_loc         0x1520         0x20 build/default/production/clock_manual.o
+ .debug_loc         0x1540         0x60 build/default/production/timer1_manual.o
+ .debug_loc         0x15a0        0x180 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_loc         0x1720        0x140 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_loc         0x1860        0x200 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -831,7 +913,7 @@ __FWPUCB
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_ranges       0x0000        0x638
+.debug_ranges       0x0000        0x780
  *(.debug_ranges)
  .debug_ranges      0x0000         0x18 build/default/production/mcc_generated_files/adc/src/adc1.o
  .debug_ranges      0x0018         0x18 build/default/production/mcc_generated_files/adc/src/adc2.o
@@ -853,14 +935,17 @@ __FWPUCB
  .debug_ranges      0x04f0         0x68 build/default/production/pfc.o
  .debug_ranges      0x0558         0x18 build/default/production/pfc_measure.o
  .debug_ranges      0x0570         0x10 build/default/production/pfc_pi.o
- .debug_ranges      0x0580         0x10 build/default/production/adc.o
- .debug_ranges      0x0590         0x18 build/default/production/port_config.o
- .debug_ranges      0x05a8         0x10 build/default/production/clock.o
- .debug_ranges      0x05b8         0x20 build/default/production/timer1.o
- .debug_ranges      0x05d8         0x48 build/default/production/traps.o
- .debug_ranges      0x0620         0x18 build/default/production/pwm_manual.o
+ .debug_ranges      0x0580         0x18 build/default/production/port_config.o
+ .debug_ranges      0x0598         0x48 build/default/production/traps.o
+ .debug_ranges      0x05e0         0x18 build/default/production/pwm_manual.o
+ .debug_ranges      0x05f8         0x10 build/default/production/adc_manual.o
+ .debug_ranges      0x0608         0x10 build/default/production/clock_manual.o
+ .debug_ranges      0x0618         0x20 build/default/production/timer1_manual.o
+ .debug_ranges      0x0638         0x68 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_ranges      0x06a0         0x58 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_ranges      0x06f8         0x88 build/default/production/mcc_generated_files/ptg/src/ptg.o
 
-.debug_aranges      0x0000        0x818
+.debug_aranges      0x0000        0x990
  *(.debug_aranges)
  .debug_aranges
                     0x0000         0x28 build/default/production/mcc_generated_files/adc/src/adc1.o
@@ -907,17 +992,23 @@ __FWPUCB
  .debug_aranges
                     0x06e0         0x20 build/default/production/pfc_pi.o
  .debug_aranges
-                    0x0700         0x20 build/default/production/adc.o
+                    0x0700         0x28 build/default/production/port_config.o
  .debug_aranges
-                    0x0720         0x28 build/default/production/port_config.o
+                    0x0728         0x58 build/default/production/traps.o
  .debug_aranges
-                    0x0748         0x20 build/default/production/clock.o
+                    0x0780         0x28 build/default/production/pwm_manual.o
  .debug_aranges
-                    0x0768         0x30 build/default/production/timer1.o
+                    0x07a8         0x20 build/default/production/adc_manual.o
  .debug_aranges
-                    0x0798         0x58 build/default/production/traps.o
+                    0x07c8         0x20 build/default/production/clock_manual.o
  .debug_aranges
-                    0x07f0         0x28 build/default/production/pwm_manual.o
+                    0x07e8         0x30 build/default/production/timer1_manual.o
+ .debug_aranges
+                    0x0818         0x78 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+ .debug_aranges
+                    0x0890         0x68 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .debug_aranges
+                    0x08f8         0x98 build/default/production/mcc_generated_files/ptg/src/ptg.o
                     0x0000                  PC = 0x0
                     0x0000                  _PC = 0x0
                     0x0000                  _PCbits = 0x0
@@ -3748,7 +3839,7 @@ LOAD __ivt_0
 LOAD data_init
 
 __c30_signature
-                    0x0000         0xb4
+                    0x0000         0xc6
  __c30_signature
                     0x0000          0x6 build/default/production/mcc_generated_files/adc/src/adc1.o
  __c30_signature
@@ -3792,52 +3883,63 @@ __c30_signature
  __c30_signature
                     0x0078          0x6 build/default/production/pfc_pi.o
  __c30_signature
-                    0x007e          0x6 build/default/production/adc.o
+                    0x007e          0x6 build/default/production/port_config.o
  __c30_signature
-                    0x0084          0x6 build/default/production/port_config.o
+                    0x0084          0x6 build/default/production/traps.o
  __c30_signature
-                    0x008a          0x6 build/default/production/clock.o
+                    0x008a          0x6 build/default/production/pwm_manual.o
  __c30_signature
-                    0x0090          0x6 build/default/production/timer1.o
+                    0x0090          0x6 build/default/production/adc_manual.o
  __c30_signature
-                    0x0096          0x6 build/default/production/traps.o
+                    0x0096          0x6 build/default/production/clock_manual.o
  __c30_signature
-                    0x009c          0x6 build/default/production/pwm_manual.o
+                    0x009c          0x6 build/default/production/timer1_manual.o
  __c30_signature
-                    0x00a2          0x6 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(delay32.AAMeo)
+                    0x00a2          0x6 build/default/production/mcc_generated_files/cmp/src/cmp1.o
  __c30_signature
-                    0x00a8          0x6 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedaa.o)
+                    0x00a8          0x6 build/default/production/mcc_generated_files/clc/src/clc1.o
  __c30_signature
-                    0x00ae          0x6 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedaa.o)
+                    0x00ae          0x6 build/default/production/mcc_generated_files/ptg/src/ptg.o
+ __c30_signature
+                    0x00b4          0x6 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(delay32.AAMeo)
+ __c30_signature
+                    0x00ba          0x6 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedaa.o)
+ __c30_signature
+                    0x00c0          0x6 c:/program files/microchip/xc-dsc/v3.21/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedaa.o)
 
-.nbss               0x4000         0x3c
+.nbss               0x4000         0x58
  .nbss              0x4000         0x18 build/default/production/mcc_generated_files/dma/src/dma.o
  .nbss              0x4018         0x14 build/default/production/board_service.o
                     0x4018                  _buttonStartStop
                     0x4020                  _buttonSpeedHalfDouble
                     0x4028                  _boardServiceISRCounter
- .nbss              0x402c          0x8 build/default/production/mcc_generated_files/system/src/dmt.o
-                    0x4030                  _calibOffset
- .nbss              0x4034          0x4 build/default/production/mcc_generated_files/pwm/src/sccp1.o
- .nbss              0x4038          0x4 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
+ .nbss              0x402c         0x14 build/default/production/mcc_generated_files/ptg/src/ptg.o
+ .nbss              0x4040          0x8 build/default/production/mcc_generated_files/system/src/dmt.o
+                    0x4044                  _calibOffset
+ .nbss              0x4048          0x8 build/default/production/mcc_generated_files/clc/src/clc1.o
+ .nbss              0x4050          0x4 build/default/production/mcc_generated_files/pwm/src/sccp1.o
+ .nbss              0x4054          0x4 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
 
 mcc_generated_files/system/src/where_was_i.s.scn1
-                    0x403c          0x4
+                    0x4058          0x4
  mcc_generated_files/system/src/where_was_i.s.scn1
-                    0x403c          0x4 build/default/production/mcc_generated_files/system/src/where_was_i.o
-                    0x403c                  _trapSrcAddr
+                    0x4058          0x4 build/default/production/mcc_generated_files/system/src/where_was_i.o
+                    0x4058                  _trapSrcAddr
 
-.ndata              0x4040          0x2
- .ndata             0x4040          0x2 build/default/production/mcc_generated_files/system/src/traps.o
+.nbss               0x405c          0x4
+ .nbss              0x405c          0x4 build/default/production/mcc_generated_files/cmp/src/cmp1.o
 
-.nbss               0x4042          0x2
- .nbss              0x4042          0x2 build/default/production/pfc.o
-                    0x4042                  _counter
+.ndata              0x4060          0x2
+ .ndata             0x4060          0x2 build/default/production/mcc_generated_files/system/src/traps.o
 
-.bss                0x4044        0x108
- .bss               0x4044         0xe8 build/default/production/pfc.o
-                    0x4044                  _pfcParam
- .bss               0x412c         0x20 build/default/production/mcc_generated_files/system/src/traps.o
+.nbss               0x4062          0x2
+ .nbss              0x4062          0x2 build/default/production/pfc.o
+                    0x4062                  _counter
+
+.bss                0x4064        0x108
+ .bss               0x4064         0xe8 build/default/production/pfc.o
+                    0x4064                  _pfcParam
+ .bss               0x414c         0x20 build/default/production/mcc_generated_files/system/src/traps.o
 
 __ivt_0           0x800004        0x47c
  __ivt_0          0x800004        0x47c __ivt_0
@@ -3998,143 +4100,196 @@ __ivt_0           0x800004        0x47c
 .config_WPUCA     0x7f3000          0x4
  .config_WPUCA    0x7f3000          0x4 build/default/production/mcc_generated_files/system/src/config_bits.o
 
-.text             0x800b68       0x4ea4
- .text            0x800b68       0x16f4 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
-                  0x801c78                  _PWM_Initialize
-                  0x801e68                  _PWM_Deinitialize
-                  0x802038                  _PWM_GeneratorEOCEventCallbackRegister
-                  0x80205c                  _PWM_GeneratorEOCEventCallback
-                  0x80206c                  _PWM_GeneratorTasks
-                  0x802110                  _PWM_CommonEventTasks
- .text            0x80225c        0xf38 build/default/production/mcc_generated_files/dma/src/dma.o
-                  0x802838                  _DMA_Initialize
-                  0x802ae0                  _DMA_Deinitialize
-                  0x802d50                  _DMA_ChannelCallbackRegister
-                  0x802e60                  _DMA_Channel0Callback
-                  0x802e70                  _DMA_Channel1Callback
-                  0x802e80                  _DMA_Channel2Callback
-                  0x802e90                  _DMA_Channel3Callback
-                  0x802ea0                  _DMA_Channel4Callback
-                  0x802eb0                  _DMA_Channel5Callback
-                  0x802ec0                  _DMA_ChannelTasks
- .text            0x803194        0xa80 build/default/production/pfc.o
-                  0x803194                  _PFC_StateMachine
-                  0x803530                  _PFC_ServiceInit
- .text            0x803c14        0x574 build/default/production/mcc_generated_files/adc/src/adc1.o
-                  0x803c14                  _ADC1_Initialize
-                  0x803ecc                  _ADC1_Deinitialize
- .text            0x804188        0x574 build/default/production/mcc_generated_files/adc/src/adc2.o
-                  0x804188                  _ADC2_Initialize
-                  0x804440                  _ADC2_Deinitialize
- .text            0x8046fc        0x33c build/default/production/board_service.o
-                  0x804798                  _IsPressed_Button1
-                  0x8047c8                  _IsPressed_Button2
-                  0x8047f8                  _BoardServiceStepIsr
-                  0x80481c                  _BoardService
-                  0x80489c                  _BoardServiceInit
-                  0x8049a0                  _HAL_InitPeripherals
-                  0x8049f0                  _HAL_PFCPWMDisableOutputs
-                  0x804a14                  _HAL_PFCPWMEnableOutputs
-                  0x804a28                  _ClearPWMPCIFault
- .text            0x804a38        0x338 build/default/production/pwm_manual.o
-                  0x804a38                  _InitPWMGenerators
-                  0x804b1c                  _InitPWMGenerator4
- .text            0x804d70        0x31c build/default/production/clock.o
-                  0x804d70                  _InitOscillator
- .text            0x80508c        0x2ec build/default/production/measure.o
-                  0x80508c                  _MCAPP_MeasureCurrentInit
-                  0x8050f4                  _MCAPP_MeasureCurrentOffset
-                  0x805200                  _MCAPP_MeasureCurrentCalibrate
-                  0x80525c                  _MCAPP_MeasureCurrentOffsetStatus
-                  0x805270                  _MCAPP_MeasureAvgInit
-                  0x8052d0                  _MCAPP_MeasureAvg
- .text            0x805378        0x188 build/default/production/mcc_generated_files/pwm/src/sccp1.o
-                  0x805378                  _SCCP1_PWM_Initialize
-                  0x8053dc                  _SCCP1_PWM_Deinitialize
-                  0x805438                  _SCCP1_PWM_Enable
-                  0x805448                  _SCCP1_PWM_Disable
-                  0x805458                  _SCCP1_PWM_PeriodSet
-                  0x805470                  _SCCP1_PWM_DutyCycleSet
-                  0x805488                  _SCCP1_PWM_SoftwareTriggerSet
-                  0x805498                  _SCCP1_PWM_CallbackRegister
-                  0x8054bc                  _SCCP1_PWM_Callback
-                  0x8054c4                  _SCCP1_PWM_Tasks
- .text            0x805500        0x168 build/default/production/mcc_generated_files/system/src/reset.o
-                  0x8055d4                  _RESET_CauseGet
-                  0x8055e0                  _RESET_CauseHandler
-                  0x805654                  _RESET_CauseClearAll
- .text            0x805668        0x150 build/default/production/mcc_generated_files/system/src/clock.o
-                  0x805668                  _CLOCK_Initialize
- .text            0x8057b8        0x148 build/default/production/mcc_generated_files/system/src/dmt.o
-                  0x8057d8                  _DMT_Initialize
-                  0x8057f4                  _DMT_Enable
-                  0x805818                  _DMT_PreClear
-                  0x805834                  _DMT_Clear
-                  0x805864                  _DMT_IsWindowOpen
-                  0x805890                  _DMT_IsPreCleared
-                  0x80589c                  _DMT_PostEventClear
-                  0x8058b8                  _DMT_TimeoutCounterGet
-                  0x8058c4                  _DMT_WindowTimeoutCounterGet
-                  0x8058d0                  _DMT_StatusGet
-                  0x8058f4                  _DMT_CounterGet
- .text            0x805900        0x10c build/default/production/adc.o
-                  0x805900                  _InitializeADCs
+.text             0x800b68       0x6048
+ .text            0x800b68       0x1f6c build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
+                  0x802378                  _PWM_Initialize
+                  0x802600                  _PWM_Deinitialize
+                  0x802860                  _PWM_GeneratorEOCEventCallbackRegister
+                  0x802884                  _PWM_GeneratorEOCEventCallback
+                  0x802894                  _PWM_GeneratorTasks
+                  0x802988                  _PWM_CommonEventTasks
+ .text            0x802ad4        0xf38 build/default/production/mcc_generated_files/dma/src/dma.o
+                  0x8030b0                  _DMA_Initialize
+                  0x803358                  _DMA_Deinitialize
+                  0x8035c8                  _DMA_ChannelCallbackRegister
+                  0x8036d8                  _DMA_Channel0Callback
+                  0x8036e8                  _DMA_Channel1Callback
+                  0x8036f8                  _DMA_Channel2Callback
+                  0x803708                  _DMA_Channel3Callback
+                  0x803718                  _DMA_Channel4Callback
+                  0x803728                  _DMA_Channel5Callback
+                  0x803738                  _DMA_ChannelTasks
+ .text            0x803a0c        0xa80 build/default/production/pfc.o
+                  0x803a0c                  _PFC_StateMachine
+                  0x803da8                  _PFC_ServiceInit
+ .text            0x80448c        0x574 build/default/production/mcc_generated_files/adc/src/adc1.o
+                  0x80448c                  _ADC1_Initialize
+                  0x804744                  _ADC1_Deinitialize
+ .text            0x804a00        0x574 build/default/production/mcc_generated_files/adc/src/adc2.o
+                  0x804a00                  _ADC2_Initialize
+                  0x804cb8                  _ADC2_Deinitialize
+ .text            0x804f74        0x524 build/default/production/mcc_generated_files/ptg/src/ptg.o
+                  0x804f74                  _PTG_Initialize
+                  0x805118                  _PTG_Deinitialize
+                  0x805180                  _PTG_Enable
+                  0x805190                  _PTG_StepSequenceStart
+                  0x8051a0                  _PTG_SoftwareTriggerSet
+                  0x8051b0                  _PTG_SoftwareTriggerClear
+                  0x8051c0                  _PTG_WatchdogTimeoutStatusGet
+                  0x8051ec                  _PTG_StepSequenceStop
+                  0x8051fc                  _PTG_Disable
+                  0x80520c                  _PTG_EventCallbackRegister
+                  0x8052f4                  _PTG_Trigger0Callback
+                  0x8052fc                  _PTG_Trigger1Callback
+                  0x805304                  _PTG_Trigger2Callback
+                  0x80530c                  _PTG_Trigger3Callback
+                  0x805314                  _PTG_WatchDogTimerCallback
+                  0x80531c                  _PTG_Tasks
+ .text            0x805498        0x33c build/default/production/board_service.o
+                  0x805534                  _IsPressed_Button1
+                  0x805564                  _IsPressed_Button2
+                  0x805594                  _BoardServiceStepIsr
+                  0x8055b8                  _BoardService
+                  0x805638                  _BoardServiceInit
+                  0x80573c                  _HAL_InitPeripherals
+                  0x80578c                  _HAL_PFCPWMDisableOutputs
+                  0x8057b0                  _HAL_PFCPWMEnableOutputs
+                  0x8057c4                  _ClearPWMPCIFault
+ .text            0x8057d4        0x338 build/default/production/pwm_manual.o
+                  0x8057d4                  _InitPWMGenerators
+                  0x8058b8                  _InitPWMGenerator4
+ .text            0x805b0c        0x31c build/default/production/clock_manual.o
+                  0x805b0c                  _InitOscillator
+ .text            0x805e28        0x2ec build/default/production/measure.o
+                  0x805e28                  _MCAPP_MeasureCurrentInit
+                  0x805e90                  _MCAPP_MeasureCurrentOffset
+                  0x805f9c                  _MCAPP_MeasureCurrentCalibrate
+                  0x805ff8                  _MCAPP_MeasureCurrentOffsetStatus
+                  0x80600c                  _MCAPP_MeasureAvgInit
+                  0x80606c                  _MCAPP_MeasureAvg
+ .text            0x806114        0x238 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+                  0x8061ac                  _CMP1_Initialize
+                  0x806204                  _CMP1_Deinitialize
+                  0x80624c                  _CMP1_Calibrate
+                  0x8062e4                  _CMP1_EventCallbackRegister
+                  0x806308                  _CMP1_EventCallback
+                  0x806310                  _CMP1_Tasks
+ .text            0x80634c        0x1b8 build/default/production/mcc_generated_files/system/src/clock.o
+                  0x80634c                  _CLOCK_Initialize
+ .text            0x806504        0x188 build/default/production/mcc_generated_files/pwm/src/sccp1.o
+                  0x806504                  _SCCP1_PWM_Initialize
+                  0x806568                  _SCCP1_PWM_Deinitialize
+                  0x8065c4                  _SCCP1_PWM_Enable
+                  0x8065d4                  _SCCP1_PWM_Disable
+                  0x8065e4                  _SCCP1_PWM_PeriodSet
+                  0x8065fc                  _SCCP1_PWM_DutyCycleSet
+                  0x806614                  _SCCP1_PWM_SoftwareTriggerSet
+                  0x806624                  _SCCP1_PWM_CallbackRegister
+                  0x806648                  _SCCP1_PWM_Callback
+                  0x806650                  _SCCP1_PWM_Tasks
+ .text            0x80668c        0x168 build/default/production/mcc_generated_files/system/src/reset.o
+                  0x806760                  _RESET_CauseGet
+                  0x80676c                  _RESET_CauseHandler
+                  0x8067e0                  _RESET_CauseClearAll
+ .text            0x8067f4        0x168 build/default/production/mcc_generated_files/clc/src/clc1.o
+                  0x806814                  _CLC1_Initialize
+                  0x80684c                  _CLC1_Deinitialize
+                  0x806874                  _CLC1_PositiveEdgeCallbackRegister
+                  0x806898                  _CLC1_PositiveEdgeCallback
+                  0x8068a0                  _CLC1_NegativeEdgeCallbackRegister
+                  0x8068c4                  _CLC1_NegativeEdgeCallback
+                  0x8068cc                  _CLC1_Tasks
+                  0x806930                  _CLC1_OutputStatusGet
+ .text            0x80695c        0x148 build/default/production/mcc_generated_files/system/src/dmt.o
+                  0x80697c                  _DMT_Initialize
+                  0x806998                  _DMT_Enable
+                  0x8069bc                  _DMT_PreClear
+                  0x8069d8                  _DMT_Clear
+                  0x806a08                  _DMT_IsWindowOpen
+                  0x806a34                  _DMT_IsPreCleared
+                  0x806a40                  _DMT_PostEventClear
+                  0x806a5c                  _DMT_TimeoutCounterGet
+                  0x806a68                  _DMT_WindowTimeoutCounterGet
+                  0x806a74                  _DMT_StatusGet
+                  0x806a98                  _DMT_CounterGet
+ .text            0x806aa4        0x10c build/default/production/adc_manual.o
+                  0x806aa4                  _InitializeADCs
 
-C:\Users\dinub\AppData\Local\Temp\cc89a4VA.s.scn1
-                  0x805a0c         0xe0
- C:\Users\dinub\AppData\Local\Temp\cc89a4VA.s.scn1
-                  0x805a0c         0xe0 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
-                  0x805a0c                  _PWM_HS
+C:\Users\dinub\AppData\Local\Temp\ccFuWZec.s.scn1
+                  0x806bb0         0xe0
+ C:\Users\dinub\AppData\Local\Temp\ccFuWZec.s.scn1
+                  0x806bb0         0xe0 build/default/production/mcc_generated_files/pwm_hs/src/pwm.o
+                  0x806bb0                  _PWM_HS
 
-.text             0x805aec        0x404
- .text            0x805aec         0xdc build/default/production/port_config.o
-                  0x805aec                  _SetupGPIOPorts
-                  0x805b6c                  _MapGPIOHWFunction
- .text            0x805bc8         0xd8 build/default/production/pfc_pi.o
-                  0x805bc8                  _PFC_ControllerPIUpdate
- .text            0x805ca0         0xd0 build/default/production/pfc_measure.o
-                  0x805ca0                  _PFC_MeasureCurrentInit
-                  0x805cd8                  _PFC_MeasureCurrentOffset
- .text            0x805d70         0xc4 build/default/production/mcc_generated_files/peripheral/src/flash.o
-                  0x805d70                  _FLASH_Initialize
- .text            0x805e34         0xbc build/default/production/mcc_generated_files/system/src/pins.o
-                  0x805e34                  _PINS_Initialize
+.text             0x806c90        0x404
+ .text            0x806c90         0xdc build/default/production/port_config.o
+                  0x806c90                  _SetupGPIOPorts
+                  0x806d10                  _MapGPIOHWFunction
+ .text            0x806d6c         0xd8 build/default/production/pfc_pi.o
+                  0x806d6c                  _PFC_ControllerPIUpdate
+ .text            0x806e44         0xd0 build/default/production/pfc_measure.o
+                  0x806e44                  _PFC_MeasureCurrentInit
+                  0x806e7c                  _PFC_MeasureCurrentOffset
+ .text            0x806f14         0xc4 build/default/production/mcc_generated_files/peripheral/src/flash.o
+                  0x806f14                  _FLASH_Initialize
+ .text            0x806fd8         0xbc build/default/production/mcc_generated_files/system/src/pins.o
+                  0x806fd8                  _PINS_Initialize
 
-.dinit            0x805ef0         0x80
- .dinit           0x805ef0         0x80 data_init
+.dinit            0x807094         0xa4
+ .dinit           0x807094         0xa4 data_init
 
-.text             0x805f70        0x21c
- .text            0x805f70         0x78 build/default/production/mcc_generated_files/timer/src/delay.o
-                  0x805f70                  _DELAY_milliseconds
-                  0x805f9c                  _DELAY_microseconds
- .text            0x805fe8         0x70 build/default/production/timer1.o
-                  0x806008                  _TIMER1_Initialize
- .text            0x806058         0x64 build/default/production/traps.o
- .text            0x8060bc         0x50 build/default/production/mcc_generated_files/system/src/dmt_asm.o
-                  0x8060c0                  _DMT_CalibratedCounterGet
-                  0x8060e0                  _DMT_Calibrate
- .text            0x80610c         0x48 build/default/production/mcc_generated_files/system/src/system.o
-                  0x80611c                  _SYSTEM_Initialize
- .text            0x806154         0x38 build/default/production/mcc_generated_files/system/src/traps.o
-                  0x806154                  _TRAPS_halt_on_error
+.text             0x807138        0x228
+ .text            0x807138         0x78 build/default/production/mcc_generated_files/timer/src/delay.o
+                  0x807138                  _DELAY_milliseconds
+                  0x807164                  _DELAY_microseconds
+ .text            0x8071b0         0x70 build/default/production/timer1_manual.o
+                  0x8071d0                  _TIMER1_Initialize
+ .text            0x807220         0x64 build/default/production/traps.o
+ .text            0x807284         0x54 build/default/production/mcc_generated_files/system/src/system.o
+                  0x807294                  _SYSTEM_Initialize
+ .text            0x8072d8         0x50 build/default/production/mcc_generated_files/system/src/dmt_asm.o
+                  0x8072dc                  _DMT_CalibratedCounterGet
+                  0x8072fc                  _DMT_Calibrate
+ .text            0x807328         0x38 build/default/production/mcc_generated_files/system/src/traps.o
+                  0x807328                  _TRAPS_halt_on_error
 
-C:\Users\dinub\AppData\Local\Temp\ccM0IItB.s.scn1
-                  0x80618c         0x30
- C:\Users\dinub\AppData\Local\Temp\ccM0IItB.s.scn1
-                  0x80618c         0x30 build/default/production/mcc_generated_files/dma/src/dma.o
-                  0x80618c                  _DMA
+C:\Users\dinub\AppData\Local\Temp\ccaI94Ww.s.scn1
+                  0x807360         0x34
+ C:\Users\dinub\AppData\Local\Temp\ccaI94Ww.s.scn1
+                  0x807360         0x34 build/default/production/mcc_generated_files/cmp/src/cmp1.o
+                  0x80736c                  _CMP_DAC1
 
-C:\Users\dinub\AppData\Local\Temp\ccSHK74A.s.scn1
-                  0x8061bc         0x2c
- C:\Users\dinub\AppData\Local\Temp\ccSHK74A.s.scn1
-                  0x8061bc         0x2c build/default/production/mcc_generated_files/pwm/src/sccp1.o
-                  0x8061bc                  _PWM1
+C:\Users\dinub\AppData\Local\Temp\ccn9DWzd.s.scn1
+                  0x807394         0x30
+ C:\Users\dinub\AppData\Local\Temp\ccn9DWzd.s.scn1
+                  0x807394         0x30 build/default/production/mcc_generated_files/dma/src/dma.o
+                  0x807394                  _DMA
 
-.text             0x8061e8         0x48
- .text            0x8061e8         0x24 build/default/production/main.o
-                  0x8061f8                  _main
- .text            0x80620c         0x14 build/default/production/mcc_generated_files/system/src/where_was_i.o
-                  0x80620c                  _where_was_i
- .text            0x806220         0x10 build/default/production/mcc_generated_files/system/src/interrupt.o
-                  0x806220                  _INTERRUPT_Initialize
-                  0x806228                  _INTERRUPT_Deinitialize
+C:\Users\dinub\AppData\Local\Temp\ccTBXc8c.s.scn1
+                  0x8073c4         0x2c
+ C:\Users\dinub\AppData\Local\Temp\ccTBXc8c.s.scn1
+                  0x8073c4         0x2c build/default/production/mcc_generated_files/pwm/src/sccp1.o
+                  0x8073c4                  _PWM1
+
+C:\Users\dinub\AppData\Local\Temp\ccA1xBNC.s.scn1
+                  0x8073f0         0x2c
+ C:\Users\dinub\AppData\Local\Temp\ccA1xBNC.s.scn1
+                  0x8073f0         0x2c build/default/production/mcc_generated_files/ptg/src/ptg.o
+                  0x8073f0                  _PTG
+
+.text             0x80741c         0x24
+ .text            0x80741c         0x24 build/default/production/main.o
+                  0x80742c                  _main
+
+C:\Users\dinub\AppData\Local\Temp\ccqAgahw.s.scn1
+                  0x807440         0x24
+ C:\Users\dinub\AppData\Local\Temp\ccqAgahw.s.scn1
+                  0x807440         0x24 build/default/production/mcc_generated_files/clc/src/clc1.o
+                  0x807440                  _CLC1
+
+.text             0x807464         0x24
+ .text            0x807464         0x14 build/default/production/mcc_generated_files/system/src/where_was_i.o
+                  0x807464                  _where_was_i
+ .text            0x807478         0x10 build/default/production/mcc_generated_files/system/src/interrupt.o
+                  0x807478                  _INTERRUPT_Initialize
+                  0x807480                  _INTERRUPT_Deinitialize

@@ -52,7 +52,7 @@
 #include <xc.h>
 #include <stdint.h>
 
-#include "adc.h"
+#include "adc_manual.h"
 
 // </editor-fold> 
 

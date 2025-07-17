@@ -52,7 +52,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "timer1.h"
+#include "timer1_manual.h"
 
 // </editor-fold> 
 

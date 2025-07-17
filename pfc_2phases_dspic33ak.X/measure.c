@@ -51,7 +51,7 @@
 #include <stdbool.h>
 
 #include "measure.h"
-#include "adc.h"
+#include "adc_manual.h"
 
 // </editor-fold>
 
