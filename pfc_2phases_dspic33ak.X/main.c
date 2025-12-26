@@ -28,11 +28,23 @@
  */
 int main(void)
 {
-    SYSTEM_Initialize();
+    /*SYSTEM_Initialize();*/
+    InitOscillator();
+    SetupGPIOPorts();
+    
+    HAL_InitPeripherals();
+
+    LED1 = 1;
     PFC_ServiceInit();
-    BoardService();
+    
     while(1)
     {
+        
+        BoardService();
+        if(IsPressed_Button1())
+        {
+            
+        }
     }
 }
 

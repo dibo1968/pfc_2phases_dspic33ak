@@ -74,23 +74,16 @@ void InitializeADCs(void);
  */
 void InitializeADCs (void)
 {
-    
+ /**************ADC1******************************************************/   
     /* Channel Configuration for IL*/
-    /*ADC1 Channel 2 for IL : AD1ANN2/AD1AN8/RP23/RB6 */ 
+    /*ADC1 Channel 8 for IL : pin29 AD1ANN2/AD1AN8/RP23/RB6 */ 
     AD1CH1CONbits.PINSEL = 8;      
     AD1CH1CONbits.SAMC   = 3;      
     AD1CH1CONbits.LEFT   = 0;
-    AD1CH1CONbits.DIFF   = 0;
-
-    /* Channel Configuration for VAC*/
-    /*ADC2 Channel 3 for VAC : AD2ANN2/AD2AN8/RP24/IOMF0/RB7 */ 
-    AD2CH0CONbits.PINSEL = 8;        
-    AD2CH0CONbits.SAMC   = 3;         
-    AD2CH0CONbits.LEFT   = 0;
-    AD2CH0CONbits.DIFF   = 0; 
+    AD1CH1CONbits.DIFF   = 0; 
     
     /* Channel Configuration for VDC*/
-    /*ADC1 Channel 4 for VDC : AD1AN6/RP8/IOMF1/RA7 */ 
+    /*ADC1 Channel 6 for VDC : 2 AD1AN6/RP8/IOMF1/RA7 */ 
     AD1CH0CONbits.PINSEL = 6;        
     AD1CH0CONbits.SAMC   = 3;         
     AD1CH0CONbits.LEFT   = 0;
@@ -98,14 +91,8 @@ void InitializeADCs (void)
     /* Turn on the ADC Core 1 */   
     AD1CONbits.ON = 1;     
     /* Waiting till the ADC Core 1 is ready*/
-    while(AD1CONbits.ADRDY == 0);  
+    while(AD1CONbits.ADRDY == 0);
     
-    /* Turn on the ADC Core 2 */
-    AD2CONbits.ON = 1;             
-    /* Waiting till the ADC Core 2 is ready*/
-    while(AD2CONbits.ADRDY == 0);   
-    
-
     /*AD1CH2 - IL used for ADC Interrupt in PFC*/
     /* Set ADC interrupt priority IPL 7  */ 
     _AD1CH1IP = 7;
@@ -121,9 +108,29 @@ void InitializeADCs (void)
     
     /*PWM4 ADC Trigger 2 for IL - AD1CH2*/
     AD1CH1CONbits.TRG1SRC = 0b01011;      
+    /*PWM4 ADC Trigger 2 for VAC - AD2CH3*/    
+    /*PWM4 ADC Trigger 2 for VDC - AD1CH4*/
+    AD1CH0CONbits.TRG1SRC = 0b01011;
+    
+    /**************ADC2******************************************************/
+    /* Channel Configuration for VAC*/
+    /*ADC2 Channel 2 for VAC : pin30 AD2ANN2/AD2AN8/RP24/IOMF0/RB7 */ 
+    AD2CH0CONbits.PINSEL = 8;        
+    AD2CH0CONbits.SAMC   = 3;         
+    AD2CH0CONbits.LEFT   = 0;
+    AD2CH0CONbits.DIFF   = 0;
+    /*ADC2 Channel 3 for VAC : pin13 OA1IN-/AD1ANN1/AD2AN0/RP4/RA3 */ 
+    AD2CH1CONbits.PINSEL = 0;        
+    AD2CH1CONbits.SAMC   = 3;         
+    AD2CH1CONbits.LEFT   = 0;
+    AD2CH1CONbits.DIFF   = 0;
+    /* Turn on the ADC Core 2 */
+    AD2CONbits.ON = 1;             
+    /* Waiting till the ADC Core 2 is ready*/
+    while(AD2CONbits.ADRDY == 0);   
+         
     /*PWM4 ADC Trigger 2 for VAC - AD2CH3*/
     AD2CH0CONbits.TRG1SRC = 0b01011;    
-    /*PWM4 ADC Trigger 2 for VDC - AD1CH4*/
-    AD1CH0CONbits.TRG1SRC = 0b01011;      
+    
 }
 // </editor-fold> 

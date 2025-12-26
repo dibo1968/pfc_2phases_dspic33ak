@@ -271,8 +271,8 @@ void HAL_InitPeripherals(void)
     InitPWMGenerators(); 
     
     /*Clearing and enabling PWM Interrupt to handle PCI Fault*/
-    ClearPWMIF();
-    EnablePWMIF();
+    ClearPWMIF(4);
+    EnablePWMIF(4);
     
     TIMER1_Initialize();
     TIMER1_InputClockSet();

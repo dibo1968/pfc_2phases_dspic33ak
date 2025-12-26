@@ -30,10 +30,10 @@ void ADC2_Initialize (void)
     AD2CMPSTAT = 0x0UL;
     //CH0TRG disabled; CH1TRG disabled; CH2TRG disabled; CH3TRG disabled; CH4TRG disabled; CH5TRG disabled; CH6TRG disabled; CH7TRG disabled; CH8TRG disabled; CH9TRG disabled; CH10TRG disabled; CH11TRG disabled; CH12TRG disabled; CH13TRG disabled; CH14TRG disabled; CH15TRG disabled; CH16TRG disabled; CH17TRG disabled; CH18TRG disabled; CH19TRG disabled; 
     AD2SWTRG = 0x0UL;
-    //TRG1SRC disabled; SAMC 0.5 TAD; NINSEL disabled; LEFT Integer; PINSEL AD2AN0; DIFF disabled; CMPMOD NONE; TRG2SRC disabled; EIEN disabled; TRG1POL disabled; ACCRO disabled; ACCBRST disabled; ACCNUM 4 samples, 13 bits result; MODE Single sample initiated by TRG1SRC[4:0] trigger; 
-    AD2CH0CON = 0x0UL;
-    //TRG1SRC disabled; SAMC 0.5 TAD; NINSEL disabled; LEFT Integer; PINSEL AD2AN0; DIFF disabled; CMPMOD NONE; TRG2SRC disabled; EIEN disabled; TRG1POL disabled; ACCRO disabled; ACCBRST disabled; ACCNUM 4 samples, 13 bits result; MODE Single sample initiated by TRG1SRC[4:0] trigger; 
-    AD2CH1CON = 0x0UL;
+    //TRG1SRC PWM1 Trigger1; SAMC 0.5 TAD; NINSEL disabled; LEFT Integer; PINSEL AD2AN0; DIFF disabled; CMPMOD NONE; TRG2SRC disabled; EIEN disabled; TRG1POL disabled; ACCRO disabled; ACCBRST disabled; ACCNUM 4 samples, 13 bits result; MODE Single sample initiated by TRG1SRC[4:0] trigger; 
+    AD2CH0CON = 0x4UL;
+    //TRG1SRC PWM1 Trigger2; SAMC 0.5 TAD; NINSEL disabled; LEFT Integer; PINSEL AD2AN1; DIFF disabled; CMPMOD NONE; TRG2SRC disabled; EIEN disabled; TRG1POL disabled; ACCRO disabled; ACCBRST disabled; ACCNUM 4 samples, 13 bits result; MODE Single sample initiated by TRG1SRC[4:0] trigger; 
+    AD2CH1CON = 0x805UL;
     //TRG1SRC disabled; SAMC 0.5 TAD; NINSEL disabled; LEFT Integer; PINSEL AD2AN0; DIFF disabled; CMPMOD NONE; TRG2SRC disabled; EIEN disabled; TRG1POL disabled; ACCRO disabled; ACCBRST disabled; ACCNUM 4 samples, 13 bits result; MODE Single sample initiated by TRG1SRC[4:0] trigger; 
     AD2CH2CON = 0x0UL;
     //TRG1SRC disabled; SAMC 0.5 TAD; NINSEL disabled; LEFT Integer; PINSEL AD2AN0; DIFF disabled; CMPMOD NONE; TRG2SRC disabled; EIEN disabled; TRG1POL disabled; ACCRO disabled; ACCBRST disabled; ACCNUM 4 samples, 13 bits result; MODE Single sample initiated by TRG1SRC[4:0] trigger; 

@@ -40,9 +40,14 @@
 
 void INTERRUPT_Initialize(void)
 {
+    // AD1CH0: ADC 1 data channel 0 done
+    // Priority: 3
+    IPC18bits.AD1CH0IP = 3;
+    
 }
 
 void INTERRUPT_Deinitialize(void)
 {
     //POR default value of priority
+    IPC18bits.AD1CH0IP = 4;
 }

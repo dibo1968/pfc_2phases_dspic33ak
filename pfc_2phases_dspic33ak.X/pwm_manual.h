@@ -58,7 +58,7 @@
 
 #include <xc.h>
 #include <stdint.h>
-        
+#include "pwm.h"        
 #include "pfc_userparams.h"
 
 // </editor-fold>
@@ -72,9 +72,9 @@
 #define PWM_FAULT_STATUS            PG1STATbits.FLTACT
         
 #define _PWMInterrupt               _PWM4Interrupt
-#define ClearPWMIF()                _PWM4IF = 0 
-#define EnablePWMIF()               _PWM4IE = 1
-#define DisablePWMIF()              _PWM4IE = 0
+#define ClearPWMIF(unit)                _PWM##unit##IF = 0 
+#define EnablePWMIF(unit)               _PWM##unit##IE = 1
+#define DisablePWMIF(unit)              _PWM##unit##IE = 0
 /*Specify PWM Module Clock in Mega Hertz*/
 #define PWM_CLOCK_MHZ                       400 
 //  PFC Period ,Duty related definitions 
@@ -102,11 +102,48 @@
 #define PFC_MAX_DUTY_COUNTS         (uint32_t)(PFC_MAX_DUTY*PFC_LOOPTIME_TCY)
 
 // </editor-fold>      
+// Section: PWM Module APIs
 
+/**
+ * @ingroup    pwmhsdriver
+ * @brief      This inline function enables the specific PWM generator selected by the argument 
+ *             PWM_GENERATOR.
+ * @param[in]  genNum - PWM generator number  
+ * @return     none  
+ */
+inline static void PWM_GeneratorIntDisable(enum PWM_GENERATOR genNum)
+{
+    switch(genNum) { 
+        case PWM_GENERATOR_1:
+                _PWM1IF = 0;
+                _PWM1IE = 0;
+                _PWM1IP = 7;              
+                break;       
+        case PWM_GENERATOR_2:
+                _PWM2IF = 0;
+                _PWM2IE = 0;
+                _PWM2IP = 7;              
+                break;       
+        case PWM_GENERATOR_3:
+                _PWM3IF = 0;
+                _PWM3IE = 0;
+                _PWM3IP = 7;              
+                break;       
+        case PWM_GENERATOR_4:
+                _PWM4IF = 0;
+                _PWM4IE = 0;
+                _PWM4IP = 7;              
+                break;       
+        default:break;    
+    }     
+}        
 // <editor-fold defaultstate="expanded" desc="INTERFACE FUNCTIONS ">
         
 void InitPWMGenerators(void);   
 void InitPWMGenerator4 (void);
+void InitPWMGenerator3 (void);
+void InitPWMGenerator2 (void);
+void InitPWMGenerator1 (void);
 
 // </editor-fold>
         
